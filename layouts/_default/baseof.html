@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Locale }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{{ if eq .Site.Language.Lang "es" }}Saltar al contenido{{ else }}Skip to content{{ end }}</a>
+    <div class="process-grid" aria-hidden="true"></div>
+    {{ block "main" . }}{{ end }}
+  </body>
+</html>

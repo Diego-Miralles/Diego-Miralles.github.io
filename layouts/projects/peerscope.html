@@ -1,0 +1,64 @@
+{{ define "main" }}
+{{ $lang := .Site.Language.Lang }}
+{{ $d := index (index hugo.Data $lang) "peerscope" }}
+<header class="site-header case-header">
+  <div class="wrap nav-inner">
+    <a class="brand" href="{{ "" | relLangURL }}" aria-label="{{ $d.back }}">{{ partial "brand.html" . }}</a>
+    <div class="nav-actions">
+      {{ range .Translations }}<a class="language-button" href="{{ .RelPermalink }}" hreflang="{{ .Language.Locale }}" aria-label="{{ $d.language_switch_label }}">{{ $d.language_switch }}</a>{{ end }}
+      <a class="button primary header-cta" href="https://peerscope.onrender.com/" target="_blank" rel="noreferrer">{{ $d.live }} <span>↗</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="case-hero">
+    <div class="wrap">
+      <a class="back-link" href="{{ "" | relLangURL }}">← {{ $d.back }}</a>
+      <div class="case-title-grid reveal">
+        <div><p class="kicker">{{ $d.kicker }}</p><span class="status-pill compact">{{ $d.status }}</span><h1>{{ $d.title }}</h1></div>
+        <div class="case-intro"><p>{{ $d.intro }}</p><strong>{{ $d.collaboration }}</strong></div>
+      </div>
+      <div class="case-metrics reveal">{{ range $d.metrics }}<div><strong>{{ .value }}</strong><span>{{ .label }}</span></div>{{ end }}</div>
+    </div>
+  </section>
+
+  <section class="case-media wrap reveal">
+    <figure class="media-frame"><div class="media-image cover"><img src="{{ "/projects/peerscope-dashboard.svg" | relURL }}" alt="{{ $d.hero_alt }}" width="1200" height="760"></div><figcaption>▣ {{ $d.hero_caption }}</figcaption></figure>
+  </section>
+
+  <section class="section">
+    <div class="wrap case-copy-grid reveal">
+      <div><p class="kicker">{{ $d.challenge_kicker }}</p><h2>{{ $d.challenge_title }}</h2></div>
+      <div><p class="body-large">{{ $d.challenge_text }}</p><aside class="highlight-card"><span aria-hidden="true">◇</span><div><h3>{{ $d.sector_title }}</h3><p>{{ $d.sector_text }}</p></div></aside></div>
+    </div>
+  </section>
+
+  <section class="section surface">
+    <div class="wrap">
+      <div class="section-heading reveal"><p class="kicker">{{ $d.flow_kicker }}</p><h2>{{ $d.flow_title }}</h2></div>
+      <div class="flow-grid reveal">{{ range $d.flow }}<article><div><span class="flow-icon">{{ .n }}</span><small>{{ .n }}</small></div><h3>{{ .title }}</h3><p>{{ .text }}</p></article>{{ end }}</div>
+      <figure class="media-frame reveal"><div class="media-image cover"><img src="{{ "/projects/peerscope-product.svg" | relURL }}" alt="{{ $d.product_alt }}" width="1200" height="760" loading="lazy"></div><figcaption>{{ $d.product_caption }}</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap evidence-grid reveal">
+      <div><p class="kicker">{{ $d.evidence_kicker }}</p><h2>{{ $d.evidence_title }}</h2><p>{{ $d.evidence_text }}</p><p class="micro-label stack-label">{{ $d.stack_label }}</p><div class="tag-row">{{ range $d.stack }}<span class="tag">{{ . }}</span>{{ end }}</div></div>
+      <figure class="media-frame architecture"><div class="media-image contain"><img src="{{ "/projects/peerscope-architecture.svg" | relURL }}" alt="{{ $d.architecture_alt }}" width="1200" height="760" loading="lazy"></div><figcaption>⌁ {{ $d.architecture_caption }}</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="section surface">
+    <div class="wrap scope-grid reveal">
+      <article><p class="kicker">{{ $d.scope_kicker }}</p><h2>{{ $d.scope_title }}</h2><p>{{ $d.scope_text }}</p><a class="text-link" href="https://javiergonzalvez07-star.github.io/projects/peerscope/" target="_blank" rel="noreferrer">{{ $d.collaborator }} ↗</a></article>
+      <aside><h3>{{ $d.limitations_title }}</h3><ul class="bullet-list">{{ range $d.limitations }}<li>{{ . }}</li>{{ end }}</ul></aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap closing-card reveal"><h2>{{ $d.closing_title }}</h2><div><div class="button-row"><a class="button primary" href="https://peerscope.onrender.com/" target="_blank" rel="noreferrer">{{ $d.live }} ↗</a><a class="button secondary" href="{{ "" | relLangURL }}">{{ $d.back }}</a></div><p class="service-note align-right">{{ $d.live_note }}</p></div></div>
+  </section>
+</main>
+{{ partial "footer.html" . }}
+{{ end }}

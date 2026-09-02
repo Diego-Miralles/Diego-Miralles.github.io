@@ -1,0 +1,34 @@
+baseURL = "https://diego-miralles.github.io/"
+title = "Diego Miralles | Chemical Engineering Portfolio"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  author = "Diego Miralles"
+  email = "diegomirallespomares@gmail.com"
+  github = "https://github.com/Diego-Miralles"
+  ogImage = "og.png"
+
+[languages]
+  [languages.en]
+    locale = "en"
+    label = "English"
+    contentDir = "content/en"
+    weight = 1
+    title = "Diego Miralles | Chemical Engineering Portfolio"
+  [languages.es]
+    locale = "es"
+    label = "Español"
+    contentDir = "content/es"
+    weight = 2
+    title = "Diego Miralles | Portfolio de Ingeniería Química"
+
+[minify]
+  minifyOutput = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

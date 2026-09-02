@@ -1,0 +1,128 @@
+{{ define "main" }}
+{{ $lang := .Site.Language.Lang }}
+{{ $d := index (index hugo.Data $lang) "home" }}
+<header class="site-header" data-header>
+  <div class="wrap nav-inner">
+    <a class="brand" href="{{ "" | relLangURL }}#top" aria-label="Diego Miralles — home">{{ partial "brand.html" . }}</a>
+    <nav class="desktop-nav" aria-label="{{ if eq $lang "es" }}Navegación principal{{ else }}Main navigation{{ end }}">
+      {{ range $d.nav }}<a href="#{{ .id }}">{{ .label }}</a>{{ end }}
+    </nav>
+    <div class="nav-actions">
+      {{ range .Translations }}<a class="language-button" href="{{ .RelPermalink }}" hreflang="{{ .Language.Locale }}" aria-label="{{ if eq $lang "es" }}Switch to English{{ else }}Cambiar a español{{ end }}">{{ if eq $lang "es" }}EN{{ else }}ES{{ end }}</a>{{ end }}
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="{{ $d.menu_label }}" data-menu-button><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="{{ if eq $lang "es" }}Navegación móvil{{ else }}Mobile navigation{{ end }}" data-mobile-nav hidden>
+    <div class="wrap">{{ range $d.nav }}<a href="#{{ .id }}" data-menu-link>{{ .label }} <span aria-hidden="true">→</span></a>{{ end }}</div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy reveal">
+        <div class="hero-meta"><span class="status-pill"><i></i>{{ $d.availability }}</span><span class="location">⌖ {{ $d.location }}</span></div>
+        <p class="kicker">{{ $d.hero_kicker }}</p>
+        <h1>{{ $d.hero_title }}</h1>
+        <p class="lede">{{ $d.hero_intro }}</p>
+        <div class="button-row">
+          <a class="button primary" href="#projects">{{ $d.primary_cta }} <span aria-hidden="true">↘</span></a>
+          <a class="button secondary" href="https://github.com/Diego-Miralles" target="_blank" rel="noreferrer">{{ $d.github_cta }} <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="process-visual reveal" aria-label="{{ $d.visual_title }}">
+        <div class="visual-top"><span>{{ $d.visual_label }}</span><strong>DM / 2026</strong></div>
+        <div class="process-canvas" aria-hidden="true">
+          <svg viewBox="0 0 620 360" role="presentation">
+            <defs><linearGradient id="pipe" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#62d4c6"/><stop offset="1" stop-color="#f0a864"/></linearGradient></defs>
+            <path class="pipe-muted" d="M16 74h125c22 0 22 52 44 52h86m76 0h85c32 0 32-72 64-72h104"/>
+            <path class="pipe" d="M16 278h114c28 0 28-70 56-70h96c31 0 31 68 62 68h97c27 0 27-119 54-119h109"/>
+            <path class="pipe-copper" d="M310 0v73m0 56v78M462 58v98m0 76v102"/>
+            <rect class="vessel" x="270" y="74" width="80" height="55" rx="26"/><line x1="281" y1="88" x2="339" y2="88"/><line x1="281" y1="101" x2="339" y2="101"/><line x1="281" y1="114" x2="339" y2="114"/>
+            <rect class="column" x="432" y="156" width="60" height="76" rx="28"/><line x1="441" y1="177" x2="483" y2="177"/><line x1="441" y1="194" x2="483" y2="194"/><line x1="441" y1="211" x2="483" y2="211"/>
+            <circle cx="130" cy="278" r="9"/><circle cx="186" cy="208" r="7"/><circle cx="344" cy="276" r="9"/><circle cx="495" cy="157" r="7"/>
+          </svg>
+        </div>
+        <div class="visual-copy"><p>{{ $d.visual_title }}</p></div>
+        <ol class="visual-nodes">{{ range $d.visual_nodes }}<li><span>{{ .n }}</span><div><strong>{{ .title }}</strong><small>{{ .text }}</small></div></li>{{ end }}</ol>
+      </div>
+    </div>
+    <div class="wrap evidence-strip">{{ range $d.evidence }}<div><span>{{ .label }}</span><strong>{{ .value }}</strong></div>{{ end }}</div>
+  </section>
+
+  <section class="section" id="profile">
+    <div class="wrap split-intro reveal">
+      <div><p class="kicker">{{ $d.profile.kicker }}</p><h2>{{ $d.profile.title }}</h2></div>
+      <div><p class="body-large">{{ $d.profile.text }}</p><div class="tag-row">{{ range $d.profile.tags }}<span class="tag">{{ . }}</span>{{ end }}</div></div>
+    </div>
+  </section>
+
+  <section class="section surface" id="education">
+    <div class="wrap card-grid two reveal">
+      <article class="feature-card education-card">
+        <p class="kicker">{{ $d.education.kicker }}</p>
+        <h2>{{ $d.education.title }}</h2>
+        <p class="subhead">{{ $d.education.school }}</p>
+        <p>{{ $d.education.text }}</p>
+      </article>
+      <aside class="list-card">
+        <p class="micro-label">{{ $d.education.coursework_label }}</p>
+        <ul class="number-list">{{ range $index, $item := $d.education.coursework }}<li><span>0{{ add $index 1 }}</span>{{ $item }}</li>{{ end }}</ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="wrap experience-grid reveal">
+      <div><p class="kicker">{{ $d.experience.kicker }}</p><h2>{{ $d.experience.title }}</h2><p class="subhead">{{ $d.experience.company }}</p></div>
+      <ul class="check-list">{{ range $d.experience.points }}<li><span aria-hidden="true">✓</span><p>{{ . }}</p></li>{{ end }}</ul>
+    </div>
+  </section>
+
+  <section class="section surface projects-section" id="projects">
+    <div class="wrap">
+      <div class="section-heading reveal"><p class="kicker">{{ $d.projects.kicker }}</p><h2>{{ $d.projects.title }}</h2></div>
+      <article class="project-card peer-card reveal">
+        <div class="gallery" data-gallery aria-label="{{ $d.projects.gallery_label }}">
+          <div class="gallery-viewport"><div class="gallery-track" data-gallery-track>
+            {{ range $d.projects.gallery }}<figure class="gallery-slide"><div class="gallery-image {{ .fit }}"><img src="{{ .src | relURL }}" alt="{{ .alt }}" width="1200" height="760" loading="lazy"></div><figcaption>{{ .caption }}</figcaption></figure>{{ end }}
+          </div></div>
+          <div class="gallery-controls"><button type="button" data-gallery-prev aria-label="{{ $d.projects.gallery_prev }}">←</button><div class="gallery-dots" data-gallery-dots></div><button type="button" data-gallery-next aria-label="{{ $d.projects.gallery_next }}">→</button></div>
+        </div>
+        <div class="peer-content">
+          <span class="status-pill compact">{{ $d.projects.peer_status }}</span>
+          <h3>{{ $d.projects.peer_title }}</h3>
+          <p class="project-lede">{{ $d.projects.peer_text }}</p>
+          <p class="collab-note">{{ $d.projects.peer_collab }}</p>
+          <div class="metric-grid">{{ range $d.projects.peer_metrics }}<div><strong>{{ .value }}</strong><span>{{ .label }}</span></div>{{ end }}</div>
+          <div class="tag-row">{{ range $d.projects.peer_tags }}<span class="tag">{{ . }}</span>{{ end }}</div>
+          <div class="button-row"><a class="button primary" href="{{ "projects/peerscope/" | relLangURL }}">{{ $d.projects.case_cta }} <span>→</span></a><a class="button secondary" href="https://peerscope.onrender.com/" target="_blank" rel="noreferrer">{{ $d.projects.live_cta }} <span>↗</span></a></div>
+          <p class="service-note">{{ $d.projects.live_note }}</p>
+        </div>
+      </article>
+
+      <article class="project-card dwsim-card reveal">
+        <div class="dwsim-visual" aria-hidden="true">
+          <span class="stream s1"></span><span class="stream s2"></span><span class="stream s3"></span>
+          <div class="unit mixer">M-101</div><div class="unit heater">E-101</div><div class="unit separator">V-101</div>
+          <div class="simulation-readout"><span>ΔH</span><strong>MODEL</strong><small>validation pending</small></div>
+        </div>
+        <div class="dwsim-content"><span class="status-pill compact copper">{{ $d.projects.dwsim_status }}</span><h3>{{ $d.projects.dwsim_title }}</h3><p class="project-lede">{{ $d.projects.dwsim_text }}</p><p class="project-note">{{ $d.projects.dwsim_note }}</p><div class="tag-row">{{ range $d.projects.dwsim_tags }}<span class="tag">{{ . }}</span>{{ end }}</div></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="capabilities">
+    <div class="wrap">
+      <div class="section-heading reveal"><p class="kicker">{{ $d.capabilities.kicker }}</p><h2>{{ $d.capabilities.title }}</h2></div>
+      <div class="capability-grid reveal">{{ range $index, $group := $d.capabilities.groups }}<article><span class="card-index">0{{ add $index 1 }}</span><h3>{{ $group.title }}</h3><ul>{{ range $group.items }}<li>{{ . }}</li>{{ end }}</ul></article>{{ end }}</div>
+      <div class="language-panel reveal"><div><p class="micro-label">{{ $d.capabilities.languages_title }}</p><div class="language-list">{{ range $d.capabilities.languages }}<span>{{ . }}</span>{{ end }}</div></div><strong>{{ $d.capabilities.training }}</strong></div>
+    </div>
+  </section>
+
+  <section class="section contact-section" id="contact">
+    <div class="wrap contact-card reveal"><div><p class="kicker">{{ $d.contact.kicker }}</p><h2>{{ $d.contact.title }}</h2><p>{{ $d.contact.text }}</p></div><div class="contact-actions"><a class="button primary" href="mailto:diegomirallespomares@gmail.com">{{ $d.contact.email }} <span>↗</span></a><a class="button secondary" href="https://github.com/Diego-Miralles" target="_blank" rel="noreferrer">{{ $d.contact.github }} <span>↗</span></a></div></div>
+  </section>
+</main>
+{{ partial "footer.html" . }}
+{{ end }}

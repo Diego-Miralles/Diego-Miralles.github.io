@@ -1,0 +1,89 @@
+nav:
+  - { label: "Perfil", id: "profile" }
+  - { label: "Formación", id: "education" }
+  - { label: "Experiencia", id: "experience" }
+  - { label: "Proyectos", id: "projects" }
+  - { label: "Competencias", id: "capabilities" }
+  - { label: "Contacto", id: "contact" }
+menu_label: "Abrir menú de navegación"
+availability: "Abierto a oportunidades de prácticas"
+location: "Alicante, España"
+hero_kicker: "01 / Pensamiento orientado a procesos"
+hero_title: "Ingeniería química aplicada a problemas reales."
+hero_intro: "Estudiante de Ingeniería Química en la Universidad de Alicante, con experiencia directa en producción química y un portfolio técnico en desarrollo centrado en simulación de procesos y análisis de ingeniería."
+primary_cta: "Ver mi trabajo"
+github_cta: "Perfil de GitHub"
+visual_label: "Enfoque de ingeniería"
+visual_title: "De los fundamentos al contexto industrial"
+visual_nodes:
+  - { n: "01", title: "Analizar", text: "Balances · termodinámica" }
+  - { n: "02", title: "Modelar", text: "DWSIM · MATLAB" }
+  - { n: "03", title: "Mejorar", text: "Seguridad · decisiones" }
+evidence:
+  - { label: "Experiencia industrial", value: "Entorno de producción química" }
+  - { label: "Herramientas", value: "DWSIM · MATLAB · Excel" }
+  - { label: "Idiomas", value: "Español · Valenciano · Inglés · Alemán" }
+profile:
+  kicker: "02 / Perfil"
+  title: "Formándome como ingeniero con la seguridad como prioridad."
+  text: "Mi base combina balances de materia y energía, termodinámica y análisis de procesos con conocimiento directo de procedimientos de planta, trabajo en equipo y disciplina operativa. Me interesan especialmente la ingeniería de procesos, la fabricación química y la industria farmacéutica."
+  tags: ["Balances de materia y energía", "Termodinámica", "Análisis de procesos", "Seguridad como prioridad"]
+education:
+  kicker: "03 / Formación"
+  title: "Grado en Ingeniería Química"
+  school: "Universidad de Alicante · 2024 — Actualidad"
+  text: "Desarrollando una base rigurosa en cálculo de procesos, ciencias químicas y análisis cuantitativo, combinada con herramientas prácticas y principios fundamentales de ingeniería."
+  coursework_label: "Fundamentos relevantes"
+  coursework: ["Balances de materia y energía", "Termodinámica", "Química física", "Química orgánica", "Matemáticas", "Física"]
+experience:
+  kicker: "04 / Experiencia industrial"
+  title: "Operador de planta química"
+  company: "Químicas Sanz · España"
+  points:
+    - "Apoyo en actividades diarias dentro de un entorno de producción química."
+    - "Seguimiento de procedimientos operativos y requisitos de seguridad laboral."
+    - "Colaboración con personal de planta para apoyar operaciones seguras, ordenadas y eficientes."
+projects:
+  kicker: "05 / Proyectos seleccionados"
+  title: "Trabajo aplicado en inteligencia competitiva y simulación de procesos."
+  peer_status: "Beta privada funcional"
+  peer_title: "PeerScope — Plataforma de inteligencia competitiva"
+  peer_visual: "Comparativas, diagnóstico e informes ejecutivos para el sector químico."
+  peer_text: "Plataforma de inteligencia competitiva centrada en empresas de fabricación química. Transforma datos financieros en KPI comparables, referencias frente a empresas similares, puntuaciones interpretables, diagnósticos e informes ejecutivos."
+  peer_collab: "Cocreado con Javier Gonzálvez. Las cifras corresponden a la plataforma compartida y reflejan su estado en septiembre de 2026."
+  peer_metrics:
+    - { value: "1.777", label: "empresas en el flujo de datos" }
+    - { value: "1.164", label: "puntuaciones competitivas válidas" }
+    - { value: "6", label: "dimensiones de puntuación interpretables" }
+  peer_tags: ["Fabricación química", "Análisis financiero", "Benchmarking competitivo", "Informes ejecutivos"]
+  case_cta: "Ver caso de estudio completo"
+  live_cta: "Abrir beta funcional"
+  live_note: "Alojada en Render; la beta puede tardar unos segundos en activarse tras un periodo de inactividad."
+  gallery_label: "Vistas del producto PeerScope"
+  gallery_prev: "Vista anterior del producto"
+  gallery_next: "Vista siguiente del producto"
+  gallery:
+    - { src: "/projects/peerscope-dashboard.svg", alt: "Dashboard sintético de benchmark químico de PeerScope", caption: "Benchmark sectorial y scoring competitivo con datos de demostración inequívocamente sintéticos.", fit: "cover" }
+    - { src: "/projects/peerscope-product.svg", alt: "Interfaz sintética del producto PeerScope", caption: "Vista del producto: de los datos financieros a un diagnóstico competitivo interpretable.", fit: "cover" }
+    - { src: "/projects/peerscope-architecture.svg", alt: "Arquitectura y flujo de datos de PeerScope", caption: "Flujo analítico trazable; las importaciones privadas permanecen aisladas del scoring.", fit: "contain" }
+  dwsim_status: "En desarrollo"
+  dwsim_title: "Simulación de un proceso químico"
+  dwsim_text: "Estudio de ingeniería con DWSIM que aplica balances de materia y energía al análisis de corrientes, equilibrio de fases, cambios de temperatura y requerimientos energéticos."
+  dwsim_note: "El caso de estudio completo se publicará únicamente cuando la simulación, los resultados y la validación estén terminados."
+  dwsim_tags: ["DWSIM", "Simulación de procesos", "Balances de energía", "Excel"]
+capabilities:
+  kicker: "06 / Competencias"
+  title: "Fundamentos técnicos con contexto industrial."
+  groups:
+    - { title: "Ingeniería de procesos", items: ["Balances de materia y energía", "Termodinámica", "Análisis de procesos"] }
+    - { title: "Software y datos", items: ["DWSIM", "MATLAB", "Microsoft Excel"] }
+    - { title: "Seguridad y ejecución", items: ["Prevención de riesgos laborales", "Documentación técnica", "Trabajo en equipo"] }
+  languages_title: "Idiomas y formación"
+  languages: ["Español · Nativo", "Valenciano · C1", "Inglés · B2", "Alemán · A2 → B1"]
+  training: "Prevención de Riesgos Laborales (PRL) · 2026"
+contact:
+  kicker: "07 / Contacto"
+  title: "Interesado en oportunidades de procesos, fabricación y sector farmacéutico."
+  text: "Estoy construyendo un portfolio de trabajo aplicado en ingeniería química y abierto a conversar sobre prácticas, proyectos técnicos y oportunidades internacionales."
+  email: "Escribir a Diego"
+  github: "Ver GitHub"

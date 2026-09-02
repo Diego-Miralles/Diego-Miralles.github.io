@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{ $lang := .Site.Language.Lang }}
+{{ $d := index (index hugo.Data $lang) "home" }}
+<header class="site-header case-header"><div class="wrap nav-inner"><a class="brand" href="{{ "" | relLangURL }}">{{ partial "brand.html" . }}</a><div class="nav-actions">{{ range .Translations }}<a class="language-button" href="{{ .RelPermalink }}">{{ if eq $lang "es" }}EN{{ else }}ES{{ end }}</a>{{ end }}</div></div></header>
+<main id="main">
+  <section class="section">
+    <div class="wrap">
+      <a class="back-link" href="{{ "" | relLangURL }}">← {{ if eq $lang "es" }}Volver al portfolio{{ else }}Back to portfolio{{ end }}</a>
+      <div class="section-heading"><p class="kicker">{{ $d.projects.kicker }}</p><h1 class="section-list-title">{{ $d.projects.title }}</h1></div>
+      <article class="project-card dwsim-card">
+        <div class="media-image cover"><img src="{{ "/projects/peerscope-dashboard.svg" | relURL }}" alt="{{ $d.projects.peer_title }}" width="1200" height="760"></div>
+        <div class="dwsim-content"><span class="status-pill compact">{{ $d.projects.peer_status }}</span><h2>{{ $d.projects.peer_title }}</h2><p class="project-lede">{{ $d.projects.peer_text }}</p><div class="button-row"><a class="button primary" href="{{ "projects/peerscope/" | relLangURL }}">{{ $d.projects.case_cta }} →</a></div></div>
+      </article>
+    </div>
+  </section>
+</main>
+{{ partial "footer.html" . }}
+{{ end }}

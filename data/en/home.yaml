@@ -1,0 +1,89 @@
+nav:
+  - { label: "Profile", id: "profile" }
+  - { label: "Education", id: "education" }
+  - { label: "Experience", id: "experience" }
+  - { label: "Projects", id: "projects" }
+  - { label: "Capabilities", id: "capabilities" }
+  - { label: "Contact", id: "contact" }
+menu_label: "Open navigation menu"
+availability: "Open to internship opportunities"
+location: "Alicante, Spain"
+hero_kicker: "01 / Process-led thinking"
+hero_title: "Chemical engineering applied to real problems."
+hero_intro: "Chemical Engineering student at the University of Alicante with hands-on exposure to chemical production and a growing technical portfolio in process simulation and engineering analysis."
+primary_cta: "Explore my work"
+github_cta: "GitHub profile"
+visual_label: "Engineering focus"
+visual_title: "From fundamentals to industrial context"
+visual_nodes:
+  - { n: "01", title: "Analyse", text: "Balances · thermodynamics" }
+  - { n: "02", title: "Model", text: "DWSIM · MATLAB" }
+  - { n: "03", title: "Improve", text: "Safety · decisions" }
+evidence:
+  - { label: "Industrial exposure", value: "Chemical production environment" }
+  - { label: "Core toolkit", value: "DWSIM · MATLAB · Excel" }
+  - { label: "Languages", value: "Spanish · Valencian · English · German" }
+profile:
+  kicker: "02 / Profile"
+  title: "A safety-conscious engineer in the making."
+  text: "My foundation combines material and energy balances, thermodynamics and process analysis with first-hand awareness of plant procedures, teamwork and operational discipline. I am particularly interested in process engineering, chemical manufacturing and the pharmaceutical industry."
+  tags: ["Material & energy balances", "Thermodynamics", "Process analysis", "Safety-conscious"]
+education:
+  kicker: "03 / Education"
+  title: "BSc in Chemical Engineering"
+  school: "University of Alicante · 2024 — Present"
+  text: "Developing a rigorous foundation across process calculations, chemical science and quantitative analysis, with practical tools introduced alongside core engineering principles."
+  coursework_label: "Relevant foundations"
+  coursework: ["Material & energy balances", "Thermodynamics", "Physical chemistry", "Organic chemistry", "Mathematics", "Physics"]
+experience:
+  kicker: "04 / Industrial experience"
+  title: "Chemical Plant Operator"
+  company: "Químicas Sanz · Spain"
+  points:
+    - "Supported day-to-day activities in a chemical production environment."
+    - "Followed established operating procedures and occupational safety requirements."
+    - "Worked alongside plant personnel to support safe, orderly and efficient operations."
+projects:
+  kicker: "05 / Selected projects"
+  title: "Applied work across competitive intelligence and process simulation."
+  peer_status: "Functional private beta"
+  peer_title: "PeerScope — Competitive Intelligence Platform"
+  peer_visual: "Chemical-sector benchmarking, diagnostics and executive reporting."
+  peer_text: "A competitive-intelligence platform focused on chemical manufacturing companies. It transforms financial records into comparable KPIs, peer-group benchmarks, interpretable competitive scores, diagnostics and executive reports."
+  peer_collab: "Co-created with Javier Gonzálvez. Figures refer to the shared platform and are a September 2026 snapshot."
+  peer_metrics:
+    - { value: "1,777", label: "companies in the data pipeline" }
+    - { value: "1,164", label: "valid competitive scores" }
+    - { value: "6", label: "interpretable scoring dimensions" }
+  peer_tags: ["Chemical manufacturing", "Financial analytics", "Competitive benchmarking", "Executive reporting"]
+  case_cta: "View full case study"
+  live_cta: "Open functional beta"
+  live_note: "Hosted on Render; the beta may take a few seconds to wake after inactivity."
+  gallery_label: "PeerScope product views"
+  gallery_prev: "Previous product view"
+  gallery_next: "Next product view"
+  gallery:
+    - { src: "/projects/peerscope-dashboard.svg", alt: "Synthetic PeerScope chemical-sector benchmark dashboard", caption: "Sector benchmark and competitive scoring with clearly synthetic demonstration data.", fit: "cover" }
+    - { src: "/projects/peerscope-product.svg", alt: "Synthetic PeerScope product interface", caption: "Product view: from financial records to an interpretable competitive diagnosis.", fit: "cover" }
+    - { src: "/projects/peerscope-architecture.svg", alt: "PeerScope analytical architecture and data flow", caption: "Traceable analytical flow; private imports remain isolated from scoring.", fit: "contain" }
+  dwsim_status: "In development"
+  dwsim_title: "Chemical Process Simulation"
+  dwsim_text: "A DWSIM-based engineering study applying material and energy balances to process streams, phase behaviour, temperature changes and energy requirements."
+  dwsim_note: "The full case study will be published only when the simulation, results and validation are complete."
+  dwsim_tags: ["DWSIM", "Process simulation", "Energy balances", "Excel"]
+capabilities:
+  kicker: "06 / Capabilities"
+  title: "Technical foundations with industrial context."
+  groups:
+    - { title: "Process engineering", items: ["Material & energy balances", "Thermodynamics", "Process analysis"] }
+    - { title: "Software & data", items: ["DWSIM", "MATLAB", "Microsoft Excel"] }
+    - { title: "Safety & delivery", items: ["Occupational risk prevention", "Technical documentation", "Teamwork"] }
+  languages_title: "Languages & training"
+  languages: ["Spanish · Native", "Valencian · C1", "English · B2", "German · A2 → B1"]
+  training: "Occupational Risk Prevention (PRL) · 2026"
+contact:
+  kicker: "07 / Contact"
+  title: "Interested in process, manufacturing and pharmaceutical opportunities."
+  text: "I am building a portfolio of practical chemical engineering work and welcome conversations about internships, technical projects and international opportunities."
+  email: "Email Diego"
+  github: "View GitHub"
