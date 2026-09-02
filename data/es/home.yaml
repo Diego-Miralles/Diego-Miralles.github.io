@@ -12,6 +12,7 @@ hero_kicker: "01 / Pensamiento orientado a procesos"
 hero_title: "Ingeniería química aplicada a problemas reales."
 hero_intro: "Estudiante de Ingeniería Química en la Universidad de Alicante, con experiencia directa en producción química y un portfolio técnico en desarrollo centrado en simulación de procesos y análisis de ingeniería."
 primary_cta: "Ver mi trabajo"
+cv_cta: "Currículum (EN)"
 github_cta: "Perfil de GitHub"
 visual_label: "Enfoque de ingeniería"
 visual_title: "De los fundamentos al contexto industrial"
@@ -77,10 +78,9 @@ capabilities:
   groups:
     - { title: "Ingeniería de procesos", items: ["Balances de materia y energía", "Termodinámica", "Análisis de procesos"] }
     - { title: "Software y datos", items: ["DWSIM", "MATLAB", "Microsoft Excel"] }
-    - { title: "Seguridad y ejecución", items: ["Prevención de riesgos laborales", "Documentación técnica", "Trabajo en equipo"] }
-  languages_title: "Idiomas y formación"
+    - { title: "Ejecución técnica", items: ["Documentación técnica", "Trabajo en equipo", "Atención al detalle"] }
+  languages_title: "Idiomas"
   languages: ["Español · Nativo", "Valenciano · C1", "Inglés · B2", "Alemán · A2 → B1"]
-  training: "Prevención de Riesgos Laborales (PRL) · 2026"
 contact:
   kicker: "07 / Contacto"
   title: "Interesado en oportunidades de procesos, fabricación y sector farmacéutico."

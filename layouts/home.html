@@ -27,6 +27,7 @@
         <p class="lede">{{ $d.hero_intro }}</p>
         <div class="button-row">
           <a class="button primary" href="#projects">{{ $d.primary_cta }} <span aria-hidden="true">↘</span></a>
+          <a class="button secondary" href="{{ "/cv/diego-miralles-cv-en.pdf" | relURL }}" download="diego-miralles-cv-en.pdf">{{ $d.cv_cta }} <span aria-hidden="true">↓</span></a>
           <a class="button secondary" href="https://github.com/Diego-Miralles" target="_blank" rel="noreferrer">{{ $d.github_cta }} <span aria-hidden="true">↗</span></a>
         </div>
       </div>
@@ -116,7 +117,7 @@
     <div class="wrap">
       <div class="section-heading reveal"><p class="kicker">{{ $d.capabilities.kicker }}</p><h2>{{ $d.capabilities.title }}</h2></div>
       <div class="capability-grid reveal">{{ range $index, $group := $d.capabilities.groups }}<article><span class="card-index">0{{ add $index 1 }}</span><h3>{{ $group.title }}</h3><ul>{{ range $group.items }}<li>{{ . }}</li>{{ end }}</ul></article>{{ end }}</div>
-      <div class="language-panel reveal"><div><p class="micro-label">{{ $d.capabilities.languages_title }}</p><div class="language-list">{{ range $d.capabilities.languages }}<span>{{ . }}</span>{{ end }}</div></div><strong>{{ $d.capabilities.training }}</strong></div>
+      <div class="language-panel reveal"><div><p class="micro-label">{{ $d.capabilities.languages_title }}</p><div class="language-list">{{ range $d.capabilities.languages }}<span>{{ . }}</span>{{ end }}</div></div>{{ with $d.capabilities.training }}<strong>{{ . }}</strong>{{ end }}</div>
     </div>
   </section>
 

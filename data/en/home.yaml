@@ -12,6 +12,7 @@ hero_kicker: "01 / Process-led thinking"
 hero_title: "Chemical engineering applied to real problems."
 hero_intro: "Chemical Engineering student at the University of Alicante with hands-on exposure to chemical production and a growing technical portfolio in process simulation and engineering analysis."
 primary_cta: "Explore my work"
+cv_cta: "Resume"
 github_cta: "GitHub profile"
 visual_label: "Engineering focus"
 visual_title: "From fundamentals to industrial context"
@@ -77,10 +78,9 @@ capabilities:
   groups:
     - { title: "Process engineering", items: ["Material & energy balances", "Thermodynamics", "Process analysis"] }
     - { title: "Software & data", items: ["DWSIM", "MATLAB", "Microsoft Excel"] }
-    - { title: "Safety & delivery", items: ["Occupational risk prevention", "Technical documentation", "Teamwork"] }
-  languages_title: "Languages & training"
+    - { title: "Technical delivery", items: ["Technical documentation", "Teamwork", "Attention to detail"] }
+  languages_title: "Languages"
   languages: ["Spanish · Native", "Valencian · C1", "English · B2", "German · A2 → B1"]
-  training: "Occupational Risk Prevention (PRL) · 2026"
 contact:
   kicker: "07 / Contact"
   title: "Interested in process, manufacturing and pharmaceutical opportunities."
