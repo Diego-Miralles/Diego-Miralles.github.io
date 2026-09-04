@@ -94,7 +94,6 @@
           <span class="status-pill compact">{{ $d.projects.peer_status }}</span>
           <h3>{{ $d.projects.peer_title }}</h3>
           <p class="project-lede">{{ $d.projects.peer_text }}</p>
-          <p class="collab-note">{{ $d.projects.peer_collab }}</p>
           <div class="metric-grid">{{ range $d.projects.peer_metrics }}<div><strong>{{ .value }}</strong><span>{{ .label }}</span></div>{{ end }}</div>
           <div class="tag-row">{{ range $d.projects.peer_tags }}<span class="tag">{{ . }}</span>{{ end }}</div>
           <div class="button-row"><a class="button primary" href="{{ "projects/peerscope/" | relLangURL }}">{{ $d.projects.case_cta }} <span>→</span></a><a class="button secondary" href="https://peerscope.onrender.com/" target="_blank" rel="noreferrer">{{ $d.projects.live_cta }} <span>↗</span></a></div>

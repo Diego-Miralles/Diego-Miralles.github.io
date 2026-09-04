@@ -51,7 +51,6 @@ projects:
   peer_title: "PeerScope — Plataforma de inteligencia competitiva"
   peer_visual: "Comparativas, diagnóstico e informes ejecutivos para el sector químico."
   peer_text: "Plataforma de inteligencia competitiva centrada en empresas de fabricación química. Transforma datos financieros en KPI comparables, referencias frente a empresas similares, puntuaciones interpretables, diagnósticos e informes ejecutivos."
-  peer_collab: "Cocreado con Javier Gonzálvez. Las cifras corresponden a la plataforma compartida y reflejan su estado en septiembre de 2026."
   peer_metrics:
     - { value: "1.777", label: "empresas en el flujo de datos" }
     - { value: "1.164", label: "puntuaciones competitivas válidas" }

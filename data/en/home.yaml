@@ -51,7 +51,6 @@ projects:
   peer_title: "PeerScope — Competitive Intelligence Platform"
   peer_visual: "Chemical-sector benchmarking, diagnostics and executive reporting."
   peer_text: "A competitive-intelligence platform focused on chemical manufacturing companies. It transforms financial records into comparable KPIs, peer-group benchmarks, interpretable competitive scores, diagnostics and executive reports."
-  peer_collab: "Co-created with Javier Gonzálvez. Figures refer to the shared platform and are a September 2026 snapshot."
   peer_metrics:
     - { value: "1,777", label: "companies in the data pipeline" }
     - { value: "1,164", label: "valid competitive scores" }

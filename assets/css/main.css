@@ -214,7 +214,6 @@ button { color: inherit; }
 .peer-content, .dwsim-content { padding: clamp(2rem, 4vw, 3.6rem); }
 .peer-content h3, .dwsim-content h3 { margin: 1.2rem 0 0; font-size: clamp(2.1rem, 3.7vw, 3.8rem); font-weight: 600; letter-spacing: -.045em; line-height: 1; text-wrap: balance; }
 .project-lede { margin: 1.5rem 0 0; color: #aec0c2; font-size: .98rem; line-height: 1.75; }
-.collab-note { margin: 1.5rem 0 0; padding-left: 1rem; border-left: 2px solid rgba(98, 212, 198, .25); color: #cbd8d8; font-size: .78rem; line-height: 1.6; }
 .metric-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; margin-top: 1.6rem; }
 .metric-grid div { padding: 1rem .75rem; border: 1px solid var(--line); border-radius: 16px; background: rgba(255, 255, 255, .025); }
 .metric-grid strong, .metric-grid span { display: block; }
