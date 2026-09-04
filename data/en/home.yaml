@@ -10,7 +10,7 @@ availability: "Open to internship opportunities"
 location: "Alicante, Spain"
 hero_kicker: "01 / Process-led thinking"
 hero_title: "Chemical engineering applied to real problems."
-hero_intro: "Chemical Engineering student at the University of Alicante with hands-on exposure to chemical production and a growing technical portfolio in process simulation and engineering analysis."
+hero_intro: "Chemical Engineering student at the University of Alicante with hands-on exposure to chemical production and completed technical work in process simulation and engineering analysis."
 primary_cta: "Explore my work"
 cv_cta: "Resume"
 github_cta: "GitHub profile"
@@ -67,11 +67,24 @@ projects:
     - { src: "/projects/peerscope-dashboard.svg", alt: "Synthetic PeerScope chemical-sector benchmark dashboard", caption: "Sector benchmark and competitive scoring with clearly synthetic demonstration data.", fit: "cover" }
     - { src: "/projects/peerscope-product.svg", alt: "Synthetic PeerScope product interface", caption: "Product view: from financial records to an interpretable competitive diagnosis.", fit: "cover" }
     - { src: "/projects/peerscope-architecture.svg", alt: "PeerScope analytical architecture and data flow", caption: "Traceable analytical flow; private imports remain isolated from scoring.", fit: "contain" }
-  dwsim_status: "In development"
-  dwsim_title: "Chemical Process Simulation"
-  dwsim_text: "A DWSIM-based engineering study applying material and energy balances to process streams, phase behaviour, temperature changes and energy requirements."
-  dwsim_note: "The full case study will be published only when the simulation, results and validation are complete."
-  dwsim_tags: ["DWSIM", "Process simulation", "Energy balances", "Excel"]
+  dwsim_status: "Completed technical study"
+  dwsim_title: "Ethanol Recovery — Flash & Distillation"
+  dwsim_text: "A DWSIM study of ethanol-water separation, testing how flash temperature changes recovery, vapour purity and specific energy, with a separate exploratory distillation extension."
+  dwsim_note: "Selected flash compromise: 88 °C. Results are supported by component balances, a documented sensitivity sweep and an educational HAZOP review."
+  dwsim_tags: ["DWSIM", "NRTL", "Process simulation", "Sensitivity analysis", "Mass balances"]
+  dwsim_metrics:
+    - { value: "58.4%", label: "ethanol recovery at 88 °C" }
+    - { value: "62.0 wt%", label: "ethanol purity in vapour" }
+    - { value: "1.098", label: "kWh/kg recovered EtOH" }
+  dwsim_case_cta: "View full case study"
+  dwsim_report_cta: "Download report"
+  dwsim_gallery_label: "Ethanol recovery project views"
+  dwsim_gallery_prev: "Previous project view"
+  dwsim_gallery_next: "Next project view"
+  dwsim_gallery:
+    - { src: "/projects/ethanol-flash-dwsim.png", alt: "DWSIM flowsheet of the ethanol-water flash reference case", caption: "Reference flowsheet: feed, heater, two-phase stream and flash separator.", fit: "contain" }
+    - { src: "/projects/ethanol-tradeoff-en.svg", alt: "Ethanol recovery and vapour purity across flash temperatures", caption: "The temperature sweep makes the recovery-purity trade-off visible and identifies the measured 88 °C compromise.", fit: "cover" }
+    - { src: "/projects/ethanol-column-schematic.svg", alt: "Simplified ethanol-water distillation column", caption: "A separate multistage scenario explores the purity gain and energy cost of higher reflux.", fit: "cover" }
 capabilities:
   kicker: "06 / Capabilities"
   title: "Technical foundations with industrial context."

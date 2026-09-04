@@ -10,7 +10,7 @@ availability: "Abierto a oportunidades de prácticas"
 location: "Alicante, España"
 hero_kicker: "01 / Pensamiento orientado a procesos"
 hero_title: "Ingeniería química aplicada a problemas reales."
-hero_intro: "Estudiante de Ingeniería Química en la Universidad de Alicante, con experiencia directa en producción química y un portfolio técnico en desarrollo centrado en simulación de procesos y análisis de ingeniería."
+hero_intro: "Estudiante de Ingeniería Química en la Universidad de Alicante, con experiencia directa en producción química y trabajos técnicos completados en simulación de procesos y análisis de ingeniería."
 primary_cta: "Ver mi trabajo"
 cv_cta: "Currículum (EN)"
 github_cta: "Perfil de GitHub"
@@ -67,11 +67,24 @@ projects:
     - { src: "/projects/peerscope-dashboard.svg", alt: "Dashboard sintético de benchmark químico de PeerScope", caption: "Benchmark sectorial y scoring competitivo con datos de demostración inequívocamente sintéticos.", fit: "cover" }
     - { src: "/projects/peerscope-product.svg", alt: "Interfaz sintética del producto PeerScope", caption: "Vista del producto: de los datos financieros a un diagnóstico competitivo interpretable.", fit: "cover" }
     - { src: "/projects/peerscope-architecture.svg", alt: "Arquitectura y flujo de datos de PeerScope", caption: "Flujo analítico trazable; las importaciones privadas permanecen aisladas del scoring.", fit: "contain" }
-  dwsim_status: "En desarrollo"
-  dwsim_title: "Simulación de un proceso químico"
-  dwsim_text: "Estudio de ingeniería con DWSIM que aplica balances de materia y energía al análisis de corrientes, equilibrio de fases, cambios de temperatura y requerimientos energéticos."
-  dwsim_note: "El caso de estudio completo se publicará únicamente cuando la simulación, los resultados y la validación estén terminados."
-  dwsim_tags: ["DWSIM", "Simulación de procesos", "Balances de energía", "Excel"]
+  dwsim_status: "Estudio técnico completado"
+  dwsim_title: "Recuperación de etanol — Flash y destilación"
+  dwsim_text: "Estudio en DWSIM de la separación agua-etanol que analiza cómo la temperatura del flash modifica recuperación, pureza del vapor y energía específica, con una extensión exploratoria independiente de destilación."
+  dwsim_note: "Compromiso flash seleccionado: 88 °C. Los resultados se apoyan en balances de componentes, un barrido de sensibilidad documentado y una revisión HAZOP educativa."
+  dwsim_tags: ["DWSIM", "NRTL", "Simulación de procesos", "Análisis de sensibilidad", "Balances de materia"]
+  dwsim_metrics:
+    - { value: "58,4%", label: "recuperación de etanol a 88 °C" }
+    - { value: "62,0% masa", label: "pureza de etanol en el vapor" }
+    - { value: "1,098", label: "kWh/kg de EtOH recuperado" }
+  dwsim_case_cta: "Ver caso de estudio completo"
+  dwsim_report_cta: "Descargar informe"
+  dwsim_gallery_label: "Vistas del proyecto de recuperación de etanol"
+  dwsim_gallery_prev: "Vista anterior del proyecto"
+  dwsim_gallery_next: "Vista siguiente del proyecto"
+  dwsim_gallery:
+    - { src: "/projects/ethanol-flash-dwsim.png", alt: "Flowsheet de DWSIM del caso de referencia flash agua-etanol", caption: "Flowsheet de referencia: alimentación, calentador, corriente bifásica y separador flash.", fit: "contain" }
+    - { src: "/projects/ethanol-tradeoff-es.svg", alt: "Recuperación de etanol y pureza del vapor a distintas temperaturas de flash", caption: "El barrido térmico muestra el compromiso recuperación-pureza y destaca la condición seleccionada de 88 °C.", fit: "cover" }
+    - { src: "/projects/ethanol-column-schematic-es.svg", alt: "Esquema simplificado de una columna de destilación agua-etanol", caption: "Un escenario multietapa independiente explora la ganancia de pureza y el coste energético de aumentar el reflujo.", fit: "cover" }
 capabilities:
   kicker: "06 / Competencias"
   title: "Fundamentos técnicos con contexto industrial."

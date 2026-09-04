@@ -8,7 +8,7 @@
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="{{ .Permalink }}">
 {{ range .AllTranslations }}<link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ .Permalink }}">{{ end }}
-{{ if eq .Site.Language.Lang "en" }}<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">{{ end }}
+{{ range .AllTranslations }}{{ if eq .Language.Lang "en" }}<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">{{ end }}{{ end }}
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Diego Miralles">
 <meta property="og:title" content="{{ .Title }}">

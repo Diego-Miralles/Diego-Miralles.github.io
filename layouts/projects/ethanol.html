@@ -1,0 +1,105 @@
+{{ define "main" }}
+{{ $lang := .Site.Language.Lang }}
+{{ $d := index (index hugo.Data $lang) "ethanol" }}
+{{ $tradeoff := cond (eq $lang "es") "/projects/ethanol-tradeoff-es.svg" "/projects/ethanol-tradeoff-en.svg" }}
+{{ $columnVisual := cond (eq $lang "es") "/projects/ethanol-column-schematic-es.svg" "/projects/ethanol-column-schematic.svg" }}
+<header class="site-header case-header">
+  <div class="wrap nav-inner">
+    <a class="brand" href="{{ "" | relLangURL }}" aria-label="{{ $d.back }}">{{ partial "brand.html" . }}</a>
+    <div class="nav-actions">
+      {{ range .Translations }}<a class="language-button" href="{{ .RelPermalink }}" hreflang="{{ .Language.Locale }}" aria-label="{{ $d.language_switch_label }}">{{ $d.language_switch }}</a>{{ end }}
+      <a class="button primary header-cta" href="{{ "/reports/ethanol-water-recovery-diego-miralles.pdf" | relURL }}" download="ethanol-water-recovery-diego-miralles.pdf">{{ $d.header_report_cta }} <span aria-hidden="true">↓</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="case-hero ethanol-hero">
+    <div class="wrap">
+      <a class="back-link" href="{{ "" | relLangURL }}">← {{ $d.back }}</a>
+      <div class="case-title-grid reveal">
+        <div><p class="kicker">{{ $d.kicker }}</p><span class="status-pill compact"><i></i>{{ $d.status }}</span><h1>{{ $d.title }}</h1></div>
+        <div class="case-intro"><p>{{ $d.intro }}</p><strong>{{ $d.scope_note }}</strong></div>
+      </div>
+      <div class="case-metrics reveal">{{ range $d.metrics }}<div><strong>{{ .value }}</strong><span>{{ .label }}</span></div>{{ end }}</div>
+    </div>
+  </section>
+
+  <section class="case-media wrap reveal">
+    <figure class="media-frame"><div class="media-image contain"><img src="{{ "/projects/ethanol-flash-dwsim.png" | relURL }}" alt="{{ $d.hero_alt }}" width="1141" height="656"></div><figcaption>▣ {{ $d.hero_caption }}</figcaption></figure>
+  </section>
+
+  <section class="section">
+    <div class="wrap case-copy-grid reveal">
+      <div><p class="kicker">{{ $d.question_kicker }}</p><h2>{{ $d.question_title }}</h2></div>
+      <div><p class="body-large">{{ $d.question_text }}</p><aside class="highlight-card"><span aria-hidden="true">◇</span><div><h3>{{ $d.decision_title }}</h3><p>{{ $d.decision_text }}</p></div></aside></div>
+    </div>
+  </section>
+
+  <section class="section surface">
+    <div class="wrap">
+      <div class="section-heading reveal"><p class="kicker">{{ $d.method_kicker }}</p><h2>{{ $d.method_title }}</h2></div>
+      <div class="flow-grid reveal">{{ range $d.method }}<article><div><span class="flow-icon">{{ .n }}</span><small>{{ .n }}</small></div><h3>{{ .title }}</h3><p>{{ .text }}</p></article>{{ end }}</div>
+      <div class="process-sequence reveal" aria-label="{{ if eq $lang "es" }}Secuencia del proceso flash{{ else }}Flash process sequence{{ end }}">
+        <div><span>01</span><strong>{{ if eq $lang "es" }}Alimentación{{ else }}Feed{{ end }}</strong><small>100 kg/h · {{ if eq $lang "es" }}30% masa EtOH{{ else }}30 wt% EtOH{{ end }}</small></div><i aria-hidden="true">→</i>
+        <div><span>02</span><strong>H-1</strong><small>{{ if eq $lang "es" }}Temperatura controlada{{ else }}Controlled temperature{{ end }}</small></div><i aria-hidden="true">→</i>
+        <div><span>03</span><strong>SEP-1</strong><small>NRTL · 1 bar</small></div><i aria-hidden="true">→</i>
+        <div><span>04</span><strong>{{ if eq $lang "es" }}Vapor + líquido{{ else }}Vapour + liquid{{ end }}</strong><small>{{ if eq $lang "es" }}Balances verificados{{ else }}Balances verified{{ end }}</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-heading reveal"><p class="kicker">{{ $d.results_kicker }}</p><h2>{{ $d.results_title }}</h2><p class="section-lede">{{ $d.results_text }}</p></div>
+      <figure class="media-frame reveal"><div class="media-image cover"><img src="{{ $tradeoff | relURL }}" alt="{{ $d.tradeoff_alt }}" width="1200" height="760" loading="lazy"></div><figcaption>⌁ {{ $d.tradeoff_caption }}</figcaption></figure>
+      <div class="table-scroll reveal" role="region" tabindex="0" aria-label="{{ $d.flash_table_label }}">
+        <table class="data-table">
+          <caption>{{ $d.flash_table_label }}</caption>
+          <thead><tr>{{ range $d.flash_headers }}<th scope="col">{{ . }}</th>{{ end }}</tr></thead>
+          <tbody>{{ range $d.flash_cases }}<tr {{ if eq (index . 0) "88 °C" }}class="selected-row"{{ end }}>{{ range . }}<td>{{ . }}</td>{{ end }}</tr>{{ end }}</tbody>
+        </table>
+      </div>
+      <aside class="result-callout reveal"><span class="result-mark">88</span><div><h3>{{ $d.selected_title }}</h3><p>{{ $d.selected_text }}</p></div></aside>
+    </div>
+  </section>
+
+  <section class="section surface">
+    <div class="wrap">
+      <div class="case-copy-grid reveal">
+        <div><p class="kicker">{{ $d.column_kicker }}</p><h2>{{ $d.column_title }}</h2></div>
+        <p class="body-large">{{ $d.column_text }}</p>
+      </div>
+      <figure class="media-frame column-media reveal"><div class="media-image cover"><img src="{{ $columnVisual | relURL }}" alt="{{ $d.column_alt }}" width="1200" height="760" loading="lazy"></div><figcaption>⌁ {{ $d.column_caption }}</figcaption></figure>
+      <div class="table-scroll reveal" role="region" tabindex="0" aria-label="{{ $d.column_table_label }}">
+        <table class="data-table compact-table">
+          <caption>{{ $d.column_table_label }}</caption>
+          <thead><tr>{{ range $d.column_headers }}<th scope="col">{{ . }}</th>{{ end }}</tr></thead>
+          <tbody>{{ range $d.column_cases }}<tr>{{ range . }}<td>{{ . }}</td>{{ end }}</tr>{{ end }}</tbody>
+        </table>
+      </div>
+      <p class="finding-note reveal">{{ $d.column_finding }}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="case-copy-grid reveal"><div><p class="kicker">{{ $d.validation_kicker }}</p><h2>{{ $d.validation_title }}</h2></div><p class="body-large">{{ $d.validation_text }}</p></div>
+      <div class="validation-grid reveal">{{ range $d.validation_cards }}<article><strong>{{ .value }}</strong><span>{{ .label }}</span><p>{{ .text }}</p></article>{{ end }}</div>
+      <aside class="safety-note reveal"><span aria-hidden="true">!</span><p>{{ $d.safety_note }}</p></aside>
+    </div>
+  </section>
+
+  <section class="section surface">
+    <div class="wrap scope-grid reveal">
+      <article><p class="kicker">{{ $d.limitations_kicker }}</p><h2>{{ $d.limitations_title }}</h2><ul class="bullet-list limitation-list">{{ range $d.limitations }}<li>{{ . }}</li>{{ end }}</ul></article>
+      <aside><h3>{{ $d.source_title }}</h3><p class="scope-copy">{{ $d.source_text }}</p><a class="button primary" href="{{ "/reports/ethanol-water-recovery-diego-miralles.pdf" | relURL }}" download="ethanol-water-recovery-diego-miralles.pdf">{{ $d.report_cta }} <span aria-hidden="true">↓</span></a></aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap closing-card reveal"><div><h2>{{ $d.closing_title }}</h2><p class="closing-copy">{{ $d.closing_text }}</p></div><div><div class="button-row"><a class="button primary" href="{{ "/reports/ethanol-water-recovery-diego-miralles.pdf" | relURL }}" download="ethanol-water-recovery-diego-miralles.pdf">{{ $d.report_cta }} ↓</a><a class="button secondary" href="{{ "" | relLangURL }}">{{ $d.back }}</a></div></div></div>
+  </section>
+</main>
+{{ partial "footer.html" . }}
+{{ end }}

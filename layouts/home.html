@@ -103,12 +103,13 @@
       </article>
 
       <article class="project-card dwsim-card reveal">
-        <div class="dwsim-visual" aria-hidden="true">
-          <span class="stream s1"></span><span class="stream s2"></span><span class="stream s3"></span>
-          <div class="unit mixer">M-101</div><div class="unit heater">E-101</div><div class="unit separator">V-101</div>
-          <div class="simulation-readout"><span>ΔH</span><strong>MODEL</strong><small>validation pending</small></div>
+        <div class="gallery ethanol-gallery" data-gallery aria-label="{{ $d.projects.dwsim_gallery_label }}">
+          <div class="gallery-viewport"><div class="gallery-track" data-gallery-track>
+            {{ range $d.projects.dwsim_gallery }}<figure class="gallery-slide"><div class="gallery-image {{ .fit }}"><img src="{{ .src | relURL }}" alt="{{ .alt }}" width="1200" height="760" loading="lazy"></div><figcaption>{{ .caption }}</figcaption></figure>{{ end }}
+          </div></div>
+          <div class="gallery-controls"><button type="button" data-gallery-prev aria-label="{{ $d.projects.dwsim_gallery_prev }}">←</button><div class="gallery-dots" data-gallery-dots></div><button type="button" data-gallery-next aria-label="{{ $d.projects.dwsim_gallery_next }}">→</button></div>
         </div>
-        <div class="dwsim-content"><span class="status-pill compact copper">{{ $d.projects.dwsim_status }}</span><h3>{{ $d.projects.dwsim_title }}</h3><p class="project-lede">{{ $d.projects.dwsim_text }}</p><p class="project-note">{{ $d.projects.dwsim_note }}</p><div class="tag-row">{{ range $d.projects.dwsim_tags }}<span class="tag">{{ . }}</span>{{ end }}</div></div>
+        <div class="dwsim-content"><span class="status-pill compact"><i></i>{{ $d.projects.dwsim_status }}</span><h3>{{ $d.projects.dwsim_title }}</h3><p class="project-lede">{{ $d.projects.dwsim_text }}</p><div class="metric-grid">{{ range $d.projects.dwsim_metrics }}<div><strong>{{ .value }}</strong><span>{{ .label }}</span></div>{{ end }}</div><p class="project-note complete-note">{{ $d.projects.dwsim_note }}</p><div class="tag-row">{{ range $d.projects.dwsim_tags }}<span class="tag">{{ . }}</span>{{ end }}</div><div class="button-row"><a class="button primary" href="{{ "projects/ethanol-recovery/" | relLangURL }}">{{ $d.projects.dwsim_case_cta }} <span>→</span></a><a class="button secondary" href="{{ "/reports/ethanol-water-recovery-diego-miralles.pdf" | relURL }}" download="ethanol-water-recovery-diego-miralles.pdf">{{ $d.projects.dwsim_report_cta }} <span>↓</span></a></div></div>
       </article>
     </div>
   </section>

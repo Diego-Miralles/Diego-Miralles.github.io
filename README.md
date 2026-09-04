@@ -17,6 +17,9 @@ The site is generated from source on every push to `main`. The generated `public
 - Public CV (English): `/cv/diego-miralles-cv-en.pdf`
 - PeerScope case study: `/projects/peerscope/`
 - PeerScope case study in Spanish: `/es/projects/peerscope/`
+- Ethanol recovery case study: `/projects/ethanol-recovery/`
+- Ethanol recovery case study in Spanish: `/es/projects/ethanol-recovery/`
+- Ethanol recovery technical report: `/reports/ethanol-water-recovery-diego-miralles.pdf`
 
 ## Content policy
 

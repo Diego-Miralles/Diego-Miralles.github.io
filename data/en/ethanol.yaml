@@ -1,0 +1,86 @@
+back: "Back to portfolio"
+language_switch: "ES"
+language_switch_label: "Cambiar a español"
+report_cta: "Download technical report"
+header_report_cta: "Report"
+kicker: "Process simulation / 2026"
+status: "Completed case study"
+title: "Ethanol recovery through flash separation and distillation"
+intro: "A reproducible DWSIM study of how heater outlet temperature changes ethanol recovery, vapour purity and specific energy in an ethanol-water flash, followed by a separate exploratory multistage-distillation scenario."
+scope_note: "Personal academic project. The flash and column use different feed bases and are therefore interpreted as complementary studies, not as a direct energy comparison."
+metrics:
+  - { value: "88 °C", label: "selected flash condition" }
+  - { value: "58.4%", label: "ethanol recovered in vapour" }
+  - { value: "62.0 wt%", label: "ethanol purity in vapour" }
+  - { value: "1.098", label: "kWh per kg EtOH recovered" }
+  - { value: "0.266%", label: "worst absolute EtOH balance error" }
+  - { value: "8 / 8", label: "documented requirements met" }
+hero_alt: "DWSIM flowsheet for the 87 degree Celsius ethanol-water flash reference case"
+hero_caption: "Reference flowsheet at 87 °C: Feed → H-1 → two-phase stream → SEP-1 → vapour + liquid. The floating table shows molar composition; portfolio KPIs use mass basis."
+
+question_kicker: "01 / Engineering question"
+question_title: "How much ethanol can a simple flash recover before product quality and energy use deteriorate?"
+question_text: "The core case feeds 100 kg/h containing 30 wt% ethanol at 25 °C and 1 bar. Only the heater outlet temperature changes. Seven simulations from 82 to 92 °C reveal when vapour first appears and quantify the balance between recovery, purity and heat duty."
+decision_title: "Decision rule"
+decision_text: "Maximum recovery alone is not the objective: stronger vaporisation also carries more water overhead. The selected condition is the best measured compromise among the sampled cases, not a claim of global optimisation."
+
+method_kicker: "02 / Reproducible method"
+method_title: "A controlled sweep with traceable balances."
+method:
+  - { n: "01", title: "Fix the feed", text: "100 kg/h, 30 wt% ethanol, 70 wt% water, 25 °C and 1 bar." }
+  - { n: "02", title: "Model non-ideality", text: "Water and ethanol are represented with the NRTL activity-coefficient model in DWSIM 9.0.5." }
+  - { n: "03", title: "Sweep temperature", text: "Run 82, 84, 86, 87, 88, 90 and 92 °C while keeping every other flash input constant." }
+  - { n: "04", title: "Verify and compare", text: "Reconcile total, ethanol and water balances, then compare recovery, purity, duty and specific energy." }
+
+results_kicker: "03 / Flash sensitivity"
+results_title: "Higher recovery comes with lower vapour purity."
+results_text: "No vapour formed at 82 or 84 °C. Across the five two-phase cases, recovery increased from 34.6% to 85.3%, while ethanol purity in the vapour fell from 67.4 wt% to 48.5 wt%."
+tradeoff_alt: "Chart showing ethanol recovery increasing and vapour purity decreasing with flash temperature"
+tradeoff_caption: "Continuous-temperature view of the five valid two-phase cases. The highlighted 88 °C case has the lowest specific energy observed in the sampled range."
+flash_table_label: "Flash sensitivity results"
+flash_headers: ["T", "Vapour", "EtOH purity", "EtOH recovery", "H-1 duty", "Specific energy"]
+flash_cases:
+  - ["86 °C", "15.410 kg/h", "67.37 wt%", "34.60%", "13.710 kW", "1.321 kWh/kg"]
+  - ["87 °C", "22.200 kg/h", "64.80 wt%", "47.95%", "16.520 kW", "1.148 kWh/kg"]
+  - ["88 °C", "28.258 kg/h", "62.00 wt%", "58.40%", "19.230 kW", "1.098 kWh/kg"]
+  - ["90 °C", "39.600 kg/h", "55.88 wt%", "73.76%", "24.960 kW", "1.128 kWh/kg"]
+  - ["92 °C", "52.730 kg/h", "48.54 wt%", "85.32%", "32.210 kW", "1.258 kWh/kg"]
+selected_title: "Why 88 °C?"
+selected_text: "Compared with the 87 °C reference, it raises ethanol recovery from 48.0% to 58.4%, retains 62.0 wt% purity and reduces specific energy from 1.148 to 1.098 kWh/kg. Moving to 92 °C recovers more ethanol, but purity drops to 48.5 wt% and duty rises to 32.21 kW."
+
+column_kicker: "04 / Distillation extension"
+column_title: "More separation, sharply diminishing energy returns."
+column_text: "A separate column study used 100 mol/s at 50 mol% ethanol and 350 K. Because that feed is different from the flash case, its energy figures cannot be compared directly. Within the recorded reflux sweep, higher reflux improved distillate composition while reboiler duty rose much faster."
+column_alt: "Simplified ethanol-water distillation column with condenser, reboiler, feed, distillate and bottoms"
+column_caption: "Simplified representation of the recorded C-01 column scenario. It is an exploratory equilibrium-stage study, not a mechanically sized process design."
+column_table_label: "Recorded reflux sensitivity"
+column_headers: ["Case", "Reflux ratio", "xEtOH distillate (mole fraction)", "Reboiler duty", "Status"]
+column_cases:
+  - ["C-01", "2", "0.8057", "2,986.14 kW", "Converged"]
+  - ["C-02", "3", "0.8201", "3,965.37 kW", "Converged"]
+  - ["C-03", "5", "0.8308", "5,926.48 kW", "Converged"]
+column_finding: "From reflux ratio 2 to 5, distillate composition improved by 2.51 percentage points while reboiler duty increased by 98.5%. The C-01 stream result corresponds to 91.38 wt% ethanol in the distillate."
+
+validation_kicker: "05 / Verification and safety"
+validation_title: "Results were checked before they were interpreted."
+validation_text: "The workbook reconciles total mass and both components for every valid flash case. The 87 °C reference closes 100.000 kg/h in and out; the worst absolute ethanol error in the sweep is 0.2664%, below the 0.5% acceptance criterion."
+validation_cards:
+  - { value: "100.000", label: "kg/h in and out at 87 °C", text: "Reference-case total mass closure." }
+  - { value: "< 0.5%", label: "component-balance criterion", text: "Every valid flash case remains within tolerance." }
+  - { value: "8 / 8", label: "requirements documented", text: "Model, feed, balances, scenarios, traceability and limitations checked." }
+  - { value: "10", label: "educational HAZOP deviations", text: "Highest-ranked scenarios: overpressure, mixture release and high separator level." }
+safety_note: "The HAZOP is a qualitative educational exercise. It does not replace a professional process-safety review, relief design, area classification or multidisciplinary validation."
+
+limitations_kicker: "06 / Scope and limitations"
+limitations_title: "What this study does — and does not — establish."
+limitations:
+  - "Steady-state binary ethanol-water model with NRTL; no feed impurities or operating variability."
+  - "No heat losses, auxiliary piping or pressure drops beyond the stated assumptions."
+  - "The flash vessel and column are not mechanically designed and no CAPEX/OPEX analysis is included."
+  - "No experimental validation; results depend on the selected thermodynamic model and equilibrium assumptions."
+  - "Flash and column feeds differ in flow, composition and temperature, so their energy use is discussed separately."
+source_title: "Full documentation"
+source_text: "The reviewed ten-page technical report contains the equations, assumptions, balance checks, sensitivity tables, educational HAZOP review and source references behind this case study. Editable working models remain offline."
+
+closing_title: "A completed study built around reproducibility, trade-offs and engineering judgement."
+closing_text: "Read the full ten-page report for equations, assumptions, tables, HAZOP notes and source references."

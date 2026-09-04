@@ -37,11 +37,14 @@ document.querySelectorAll('[data-gallery]').forEach((gallery) => {
 
   let active = 0;
   let touchStart = null;
+  const isSpanish = document.documentElement.lang.toLowerCase().startsWith('es');
 
   const dotButtons = slides.map((_, index) => {
     const dot = document.createElement('button');
     dot.type = 'button';
-    dot.setAttribute('aria-label', `View ${index + 1} of ${slides.length}`);
+    dot.setAttribute('aria-label', isSpanish
+      ? `Vista ${index + 1} de ${slides.length}`
+      : `View ${index + 1} of ${slides.length}`);
     dot.addEventListener('click', () => show(index));
     dots.appendChild(dot);
     return dot;

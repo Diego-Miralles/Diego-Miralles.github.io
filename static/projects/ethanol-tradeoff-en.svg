@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Flash temperature trade-off between ethanol recovery and vapour purity</title>
+  <desc id="desc">Between 86 and 92 degrees Celsius, ethanol recovery rises from 34.6 to 85.3 percent while vapour purity falls from 67.4 to 48.5 percent. The selected compromise is 88 degrees Celsius.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1c21"/><stop offset="1" stop-color="#071115"/></linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <g stroke="#d7f4ef" stroke-opacity=".08"><path d="M0 80H1200M0 160H1200M0 240H1200M0 320H1200M0 400H1200M0 480H1200M0 560H1200M0 640H1200"/><path d="M80 0V760M160 0V760M240 0V760M320 0V760M400 0V760M480 0V760M560 0V760M640 0V760M720 0V760M800 0V760M880 0V760M960 0V760M1040 0V760M1120 0V760"/></g>
+  <text x="86" y="64" fill="#62d4c6" font-family="Consolas,monospace" font-size="16" letter-spacing="3">FLASH SENSITIVITY / 5 TWO-PHASE CASES</text>
+  <text x="86" y="108" fill="#eef8f6" font-family="Segoe UI,Arial,sans-serif" font-size="34" font-weight="600">Temperature changes both yield and quality.</text>
+  <g font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#91a9ad">
+    <text x="80" y="606" text-anchor="end">30%</text><text x="80" y="526" text-anchor="end">40%</text><text x="80" y="446" text-anchor="end">50%</text><text x="80" y="366" text-anchor="end">60%</text><text x="80" y="286" text-anchor="end">70%</text><text x="80" y="206" text-anchor="end">80%</text><text x="80" y="126" text-anchor="end">90%</text>
+  </g>
+  <g stroke="#d7f4ef" stroke-opacity=".13"><path d="M100 600H1110M100 520H1110M100 440H1110M100 360H1110M100 280H1110M100 200H1110M100 120H1110"/></g>
+  <rect x="454" y="120" width="52" height="480" rx="16" fill="#62d4c6" fill-opacity=".07" stroke="#62d4c6" stroke-opacity=".24"/>
+  <path d="M180 563 L330 456 L480 373 L780 250 L1080 158" fill="none" stroke="#62d4c6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <path d="M180 301 L330 322 L480 344 L780 393 L1080 452" fill="none" stroke="#f0a864" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#071115" stroke-width="5">
+    <g stroke="#62d4c6"><circle cx="180" cy="563" r="8"/><circle cx="330" cy="456" r="8"/><circle cx="480" cy="373" r="10"/><circle cx="780" cy="250" r="8"/><circle cx="1080" cy="158" r="8"/></g>
+    <g stroke="#f0a864"><circle cx="180" cy="301" r="8"/><circle cx="330" cy="322" r="8"/><circle cx="480" cy="344" r="10"/><circle cx="780" cy="393" r="8"/><circle cx="1080" cy="452" r="8"/></g>
+  </g>
+  <g font-family="Consolas,monospace" font-size="16" fill="#b8cbcc"><text x="180" y="635" text-anchor="middle">86</text><text x="330" y="635" text-anchor="middle">87</text><text x="480" y="635" text-anchor="middle" fill="#62d4c6">88</text><text x="780" y="635" text-anchor="middle">90</text><text x="1080" y="635" text-anchor="middle">92</text><text x="600" y="683" text-anchor="middle" fill="#91a9ad">HEATER OUTLET TEMPERATURE / °C</text></g>
+  <g font-family="Segoe UI,Arial,sans-serif" font-size="16"><path d="M720 54h44" stroke="#62d4c6" stroke-width="5"/><text x="777" y="60" fill="#d5e5e4">Ethanol recovery</text><path d="M928 54h44" stroke="#f0a864" stroke-width="5"/><text x="985" y="60" fill="#d5e5e4">Vapour purity</text></g>
+  <g transform="translate(520 468)"><rect width="284" height="118" rx="18" fill="#0d2429" stroke="#62d4c6" stroke-opacity=".42"/><text x="20" y="30" fill="#62d4c6" font-family="Consolas,monospace" font-size="13" letter-spacing="2">SELECTED COMPROMISE</text><text x="20" y="66" fill="#eef8f6" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="600">88 °C</text><text x="98" y="65" fill="#b4c7c8" font-family="Segoe UI,Arial,sans-serif" font-size="15">58.4% recovery · 62.0% purity</text><text x="20" y="94" fill="#91a9ad" font-family="Segoe UI,Arial,sans-serif" font-size="14">Minimum specific energy: 1.098 kWh/kg EtOH</text></g>
+</svg>
