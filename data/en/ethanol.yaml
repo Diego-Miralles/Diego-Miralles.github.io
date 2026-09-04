@@ -79,8 +79,15 @@ limitations:
   - "The flash vessel and column are not mechanically designed and no CAPEX/OPEX analysis is included."
   - "No experimental validation; results depend on the selected thermodynamic model and equilibrium assumptions."
   - "Flash and column feeds differ in flow, composition and temperature, so their energy use is discussed separately."
-source_title: "Full documentation"
-source_text: "The reviewed ten-page technical report contains the equations, assumptions, balance checks, sensitivity tables, educational HAZOP review and source references behind this case study. Editable working models remain offline."
+source_title: "Documentation and reproducible files"
+source_text: "The report presents the engineering interpretation. The workbook makes the balances, sensitivity analysis, charts and HAZOP traceable; the two DWSIM models preserve the solved flash and column scenarios."
+downloads:
+  - { type: "PDF", label: "Technical report", meta: "10 pages · read or download", href: "/reports/ethanol-water-recovery-diego-miralles.pdf", filename: "ethanol-water-recovery-diego-miralles.pdf" }
+  - { type: "XLSX", label: "Calculation workbook", meta: "Balances, sensitivity, charts and verification", href: "/files/ethanol-water-calculations.xlsx", filename: "ethanol-water-calculations.xlsx" }
+  - { type: "DWSIM", label: "Flash model", meta: "Ethanol–water reference case", href: "/files/ethanol-water-flash.dwxmz", filename: "ethanol-water-flash.dwxmz" }
+  - { type: "DWSIM", label: "Column model", meta: "Independent distillation scenario", href: "/files/ethanol-water-distillation-column.dwxmz", filename: "ethanol-water-distillation-column.dwxmz" }
+download_note: "The workbook opens in Microsoft Excel or a compatible application. The model files download for use with DWSIM 9.0.5 or a compatible release; browsers cannot display them directly. Public copies contain no local paths or computer name."
+files_jump_cta: "Project files"
 
 closing_title: "A completed study built around reproducibility, trade-offs and engineering judgement."
-closing_text: "Read the full ten-page report for equations, assumptions, tables, HAZOP notes and source references."
+closing_text: "The report, workbook and two DWSIM models connect the public summary to reproducible technical evidence."

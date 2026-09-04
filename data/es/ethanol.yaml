@@ -79,8 +79,15 @@ limitations:
   - "El recipiente flash y la columna no están dimensionados mecánicamente y no se incluye análisis CAPEX/OPEX."
   - "No existe validación experimental; los resultados dependen del modelo termodinámico y de los supuestos de equilibrio."
   - "Las alimentaciones del flash y la columna difieren en caudal, composición y temperatura, por lo que sus consumos se analizan por separado."
-source_title: "Documentación completa"
-source_text: "El informe técnico revisado de diez páginas reúne las ecuaciones, supuestos, comprobaciones de balances, tablas de sensibilidad, revisión HAZOP educativa y referencias que respaldan este caso de estudio. Los modelos de trabajo editables permanecen fuera de línea."
+source_title: "Documentación y archivos reproducibles"
+source_text: "El informe reúne la interpretación técnica. El libro de cálculo permite auditar balances, sensibilidad, gráficos y HAZOP; los dos modelos DWSIM conservan los escenarios resueltos de flash y columna."
+downloads:
+  - { type: "PDF", label: "Informe técnico", meta: "10 páginas · lectura y descarga", href: "/reports/ethanol-water-recovery-diego-miralles.pdf", filename: "ethanol-water-recovery-diego-miralles.pdf" }
+  - { type: "XLSX", label: "Libro de cálculo", meta: "Balances, sensibilidad, gráficos y verificación", href: "/files/ethanol-water-calculations.xlsx", filename: "ethanol-water-calculations.xlsx" }
+  - { type: "DWSIM", label: "Modelo flash", meta: "Caso de referencia agua–etanol", href: "/files/ethanol-water-flash.dwxmz", filename: "ethanol-water-flash.dwxmz" }
+  - { type: "DWSIM", label: "Modelo de columna", meta: "Escenario independiente de destilación", href: "/files/ethanol-water-distillation-column.dwxmz", filename: "ethanol-water-distillation-column.dwxmz" }
+download_note: "El Excel se abre con Microsoft Excel o una aplicación compatible. Los modelos se descargan y requieren DWSIM 9.0.5 o una versión compatible; no se visualizan directamente en el navegador. Las copias públicas no contienen rutas locales ni el nombre del equipo."
+files_jump_cta: "Archivos del proyecto"
 
 closing_title: "Un estudio completado alrededor de la reproducibilidad, los compromisos y el criterio de ingeniería."
-closing_text: "El informe completo de diez páginas incluye ecuaciones, supuestos, tablas, notas HAZOP y referencias utilizadas."
+closing_text: "El informe, el Excel y los dos modelos DWSIM permiten pasar del resumen público a la evidencia técnica reproducible."

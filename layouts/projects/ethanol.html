@@ -93,12 +93,25 @@
   <section class="section surface">
     <div class="wrap scope-grid reveal">
       <article><p class="kicker">{{ $d.limitations_kicker }}</p><h2>{{ $d.limitations_title }}</h2><ul class="bullet-list limitation-list">{{ range $d.limitations }}<li>{{ . }}</li>{{ end }}</ul></article>
-      <aside><h3>{{ $d.source_title }}</h3><p class="scope-copy">{{ $d.source_text }}</p><a class="button primary" href="{{ "/reports/ethanol-water-recovery-diego-miralles.pdf" | relURL }}" download="ethanol-water-recovery-diego-miralles.pdf">{{ $d.report_cta }} <span aria-hidden="true">↓</span></a></aside>
+      <aside id="downloads" class="download-panel">
+        <h3>{{ $d.source_title }}</h3>
+        <p class="scope-copy">{{ $d.source_text }}</p>
+        <div class="download-list">
+          {{ range $d.downloads }}
+          <a class="download-item" href="{{ .href | relURL }}" download="{{ .filename }}">
+            <span class="download-type">{{ .type }}</span>
+            <span class="download-copy"><strong>{{ .label }}</strong><small>{{ .meta }}</small></span>
+            <span class="download-arrow" aria-hidden="true">↓</span>
+          </a>
+          {{ end }}
+        </div>
+        <p class="download-note">{{ $d.download_note }}</p>
+      </aside>
     </div>
   </section>
 
   <section class="section">
-    <div class="wrap closing-card reveal"><div><h2>{{ $d.closing_title }}</h2><p class="closing-copy">{{ $d.closing_text }}</p></div><div><div class="button-row"><a class="button primary" href="{{ "/reports/ethanol-water-recovery-diego-miralles.pdf" | relURL }}" download="ethanol-water-recovery-diego-miralles.pdf">{{ $d.report_cta }} ↓</a><a class="button secondary" href="{{ "" | relLangURL }}">{{ $d.back }}</a></div></div></div>
+    <div class="wrap closing-card reveal"><div><h2>{{ $d.closing_title }}</h2><p class="closing-copy">{{ $d.closing_text }}</p></div><div><div class="button-row"><a class="button primary" href="#downloads">{{ $d.files_jump_cta }} <span aria-hidden="true">↑</span></a><a class="button secondary" href="{{ "" | relLangURL }}">{{ $d.back }}</a></div></div></div>
   </section>
 </main>
 {{ partial "footer.html" . }}

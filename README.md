@@ -20,7 +20,10 @@ The site is generated from source on every push to `main`. The generated `public
 - Ethanol recovery case study: `/projects/ethanol-recovery/`
 - Ethanol recovery case study in Spanish: `/es/projects/ethanol-recovery/`
 - Ethanol recovery technical report: `/reports/ethanol-water-recovery-diego-miralles.pdf`
+- Ethanol recovery calculation workbook: `/files/ethanol-water-calculations.xlsx`
+- DWSIM flash model: `/files/ethanol-water-flash.dwxmz`
+- DWSIM distillation-column model: `/files/ethanol-water-distillation-column.dwxmz`
 
 ## Content policy
 
-Only verified, publishable information is included. Pending employment dates, private contact details and unfinished project results are excluded until confirmed.
+Only verified, publishable information is included. Pending employment dates, private contact details and unfinished project results are excluded until confirmed. Public DWSIM copies are sanitized to remove local paths and computer identifiers; the original model results remain unchanged.

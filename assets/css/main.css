@@ -354,6 +354,16 @@ button { color: inherit; }
 .limitation-list { margin-top: 2rem; }
 .scope-copy { margin: 1.3rem 0 1.8rem; color: var(--muted); font-size: .82rem; line-height: 1.75; }
 .scope-grid aside .button { margin-top: .25rem; }
+.download-panel { scroll-margin-top: 110px; }
+.download-list { display: grid; gap: .65rem; margin-top: 1.5rem; }
+.download-item { display: grid; grid-template-columns: 52px 1fr auto; align-items: center; gap: 1rem; min-height: 78px; padding: .85rem 1rem; border: 1px solid var(--line); border-radius: 15px; background: rgba(255, 255, 255, .025); transition: transform .18s, border-color .18s, background .18s; }
+.download-item:hover { transform: translateY(-2px); border-color: rgba(98, 212, 198, .35); background: rgba(98, 212, 198, .055); }
+.download-type { display: grid; width: 50px; min-height: 38px; place-items: center; border-radius: 10px; background: rgba(98, 212, 198, .1); color: var(--teal); font-family: var(--mono); font-size: .58rem; font-weight: 800; letter-spacing: .04em; }
+.download-copy strong, .download-copy small { display: block; }
+.download-copy strong { color: var(--text); font-size: .8rem; }
+.download-copy small { margin-top: .3rem; color: var(--muted); font-size: .66rem; line-height: 1.45; }
+.download-arrow { color: var(--teal); font-size: 1rem; }
+.download-note { margin: 1rem 0 0; color: var(--muted); font-size: .68rem; line-height: 1.65; }
 .closing-copy { max-width: 720px; margin: 1.25rem 0 0; color: var(--muted); line-height: 1.7; }
 
 a:focus-visible, button:focus-visible { outline: 3px solid rgba(98, 212, 198, .65); outline-offset: 3px; }
@@ -423,6 +433,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid rgba(98, 212, 198, .6
   .case-metrics div { min-height: 105px; }
   .process-sequence, .validation-grid { grid-template-columns: 1fr; }
   .result-callout { grid-template-columns: 1fr; }
+  .download-item { grid-template-columns: 46px 1fr auto; padding-inline: .8rem; }
+  .download-type { width: 44px; }
   .footer-inner { align-items: flex-start; flex-direction: column; justify-content: center; }
 }
 
