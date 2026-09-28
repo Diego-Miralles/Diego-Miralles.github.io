@@ -31,24 +31,50 @@
           <a class="button secondary" href="https://github.com/Diego-Miralles" target="_blank" rel="noreferrer">{{ $d.github_cta }} <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <div class="process-visual reveal" aria-label="{{ $d.visual_title }}">
-        <div class="visual-top"><span>{{ $d.visual_label }}</span><strong>DM / 2026</strong></div>
-        <div class="process-canvas" aria-hidden="true">
-          <svg viewBox="0 0 620 360" role="presentation">
-            <defs><linearGradient id="pipe" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#62d4c6"/><stop offset="1" stop-color="#f0a864"/></linearGradient></defs>
-            <path class="pipe-muted" d="M16 74h125c22 0 22 52 44 52h86m76 0h85c32 0 32-72 64-72h104"/>
-            <path class="pipe" d="M16 278h114c28 0 28-70 56-70h96c31 0 31 68 62 68h97c27 0 27-119 54-119h109"/>
-            <path class="pipe-copper" d="M310 0v73m0 56v78M462 58v98m0 76v102"/>
-            <rect class="vessel" x="270" y="74" width="80" height="55" rx="26"/><line x1="281" y1="88" x2="339" y2="88"/><line x1="281" y1="101" x2="339" y2="101"/><line x1="281" y1="114" x2="339" y2="114"/>
-            <rect class="column" x="432" y="156" width="60" height="76" rx="28"/><line x1="441" y1="177" x2="483" y2="177"/><line x1="441" y1="194" x2="483" y2="194"/><line x1="441" y1="211" x2="483" y2="211"/>
-            <circle cx="130" cy="278" r="9"/><circle cx="186" cy="208" r="7"/><circle cx="344" cy="276" r="9"/><circle cx="495" cy="157" r="7"/>
-          </svg>
-        </div>
-        <div class="visual-copy"><p>{{ $d.visual_title }}</p></div>
-        <ol class="visual-nodes">{{ range $d.visual_nodes }}<li><span>{{ .n }}</span><div><strong>{{ .title }}</strong><small>{{ .text }}</small></div></li>{{ end }}</ol>
-      </div>
+      <figure class="featured-study">
+        <p class="kicker">{{ $d.featured_label }}</p>
+        <h2>{{ $d.featured_title }}</h2>
+        {{ $figure := cond (eq $lang "es") "/projects/ethanol-tradeoff-es.svg" "/projects/ethanol-tradeoff-en.svg" }}
+        <a href="{{ "projects/ethanol-recovery/" | relLangURL }}" aria-label="{{ $d.featured_cta }}"><img src="{{ $figure | relURL }}" alt="{{ (index $d.projects.dwsim_gallery 1).alt }}" width="1200" height="760" fetchpriority="high"></a>
+        <figcaption>{{ $d.featured_caption }}</figcaption>
+        <a class="text-link" href="{{ "projects/ethanol-recovery/" | relLangURL }}">{{ $d.featured_cta }} →</a>
+      </figure>
     </div>
-    <div class="wrap evidence-strip">{{ range $d.evidence }}<div><span>{{ .label }}</span><strong>{{ .value }}</strong></div>{{ end }}</div>
+  </section>
+
+  <section class="section surface projects-section" id="projects">
+    <div class="wrap">
+      <div class="section-heading reveal"><p class="kicker">{{ $d.projects.kicker }}</p><h2>{{ $d.projects.title }}</h2></div>
+      <article class="project-card dwsim-card reveal">
+        <div class="gallery ethanol-gallery" data-gallery aria-label="{{ $d.projects.dwsim_gallery_label }}">
+          <div class="gallery-viewport"><div class="gallery-track" data-gallery-track>
+            {{ range $d.projects.dwsim_gallery }}<figure class="gallery-slide"><div class="gallery-image {{ .fit }}"><a href="{{ .src | relURL }}" target="_blank" rel="noopener" aria-label="{{ if eq $lang "es" }}Ampliar imagen: {{ else }}Enlarge image: {{ end }}{{ .alt }}"><img src="{{ .src | relURL }}" alt="{{ .alt }}" width="1200" height="760" loading="lazy"></a></div><figcaption>{{ .caption }}</figcaption></figure>{{ end }}
+          </div></div>
+          <div class="gallery-controls"><button type="button" data-gallery-prev aria-label="{{ $d.projects.dwsim_gallery_prev }}">←</button><div class="gallery-dots" data-gallery-dots></div><button type="button" data-gallery-next aria-label="{{ $d.projects.dwsim_gallery_next }}">→</button></div>
+        </div>
+        <div class="dwsim-content"><span class="status-pill compact"><i></i>{{ $d.projects.dwsim_status }}</span><h3>{{ $d.projects.dwsim_title }}</h3><p class="project-lede">{{ $d.projects.dwsim_text }}</p><p class="metric-context">{{ $d.projects.dwsim_conditions }}</p><div class="metric-grid">{{ range $d.projects.dwsim_metrics }}<div><strong>{{ .value }}</strong><span>{{ .label }}</span></div>{{ end }}</div><p class="project-note complete-note">{{ $d.projects.dwsim_note }}</p><div class="tag-row">{{ range $d.projects.dwsim_tags }}<span class="tag">{{ . }}</span>{{ end }}</div><div class="button-row"><a class="button primary" href="{{ "projects/ethanol-recovery/" | relLangURL }}">{{ $d.projects.dwsim_case_cta }} <span>→</span></a><a class="button secondary" href="{{ "/reports/ethanol-water-recovery-diego-miralles.pdf" | relURL }}" download="ethanol-water-recovery-diego-miralles.pdf">{{ $d.projects.dwsim_report_cta }} <span>↓</span></a></div></div>
+      </article>
+
+      <article class="project-card peer-card reveal">
+        <div class="gallery" data-gallery aria-label="{{ $d.projects.gallery_label }}">
+          <div class="gallery-viewport"><div class="gallery-track" data-gallery-track>
+            {{ range $d.projects.gallery }}<figure class="gallery-slide"><div class="gallery-image {{ .fit }}"><a href="{{ .src | relURL }}" target="_blank" rel="noopener" aria-label="{{ if eq $lang "es" }}Ampliar imagen: {{ else }}Enlarge image: {{ end }}{{ .alt }}"><img src="{{ .src | relURL }}" alt="{{ .alt }}" width="1200" height="760" loading="lazy"></a></div><figcaption>{{ .caption }}</figcaption></figure>{{ end }}
+          </div></div>
+          <div class="gallery-controls"><button type="button" data-gallery-prev aria-label="{{ $d.projects.gallery_prev }}">←</button><div class="gallery-dots" data-gallery-dots></div><button type="button" data-gallery-next aria-label="{{ $d.projects.gallery_next }}">→</button></div>
+        </div>
+        <div class="peer-content">
+          <span class="status-pill compact">{{ $d.projects.peer_status }}</span>
+          <h3>{{ $d.projects.peer_title }}</h3>
+          <p class="project-lede">{{ $d.projects.peer_text }}</p>
+          <p class="project-note">{{ $d.projects.peer_note }}</p>
+          <div class="tag-row">{{ range $d.projects.peer_tags }}<span class="tag">{{ . }}</span>{{ end }}</div>
+          <div class="button-row"><a class="button primary" href="{{ "projects/peerscope/" | relLangURL }}">{{ $d.projects.case_cta }} <span>→</span></a><a class="button secondary" href="https://peerscope.onrender.com/" target="_blank" rel="noreferrer">{{ $d.projects.live_cta }} <span>↗</span></a></div>
+          <p class="service-note">{{ $d.projects.live_note }}</p>
+        </div>
+      </article>
+
+
+    </div>
   </section>
 
   <section class="section" id="profile">
@@ -80,43 +106,12 @@
     </div>
   </section>
 
-  <section class="section surface projects-section" id="projects">
-    <div class="wrap">
-      <div class="section-heading reveal"><p class="kicker">{{ $d.projects.kicker }}</p><h2>{{ $d.projects.title }}</h2></div>
-      <article class="project-card peer-card reveal">
-        <div class="gallery" data-gallery aria-label="{{ $d.projects.gallery_label }}">
-          <div class="gallery-viewport"><div class="gallery-track" data-gallery-track>
-            {{ range $d.projects.gallery }}<figure class="gallery-slide"><div class="gallery-image {{ .fit }}"><img src="{{ .src | relURL }}" alt="{{ .alt }}" width="1200" height="760" loading="lazy"></div><figcaption>{{ .caption }}</figcaption></figure>{{ end }}
-          </div></div>
-          <div class="gallery-controls"><button type="button" data-gallery-prev aria-label="{{ $d.projects.gallery_prev }}">←</button><div class="gallery-dots" data-gallery-dots></div><button type="button" data-gallery-next aria-label="{{ $d.projects.gallery_next }}">→</button></div>
-        </div>
-        <div class="peer-content">
-          <span class="status-pill compact">{{ $d.projects.peer_status }}</span>
-          <h3>{{ $d.projects.peer_title }}</h3>
-          <p class="project-lede">{{ $d.projects.peer_text }}</p>
-          <div class="metric-grid">{{ range $d.projects.peer_metrics }}<div><strong>{{ .value }}</strong><span>{{ .label }}</span></div>{{ end }}</div>
-          <div class="tag-row">{{ range $d.projects.peer_tags }}<span class="tag">{{ . }}</span>{{ end }}</div>
-          <div class="button-row"><a class="button primary" href="{{ "projects/peerscope/" | relLangURL }}">{{ $d.projects.case_cta }} <span>→</span></a><a class="button secondary" href="https://peerscope.onrender.com/" target="_blank" rel="noreferrer">{{ $d.projects.live_cta }} <span>↗</span></a></div>
-          <p class="service-note">{{ $d.projects.live_note }}</p>
-        </div>
-      </article>
 
-      <article class="project-card dwsim-card reveal">
-        <div class="gallery ethanol-gallery" data-gallery aria-label="{{ $d.projects.dwsim_gallery_label }}">
-          <div class="gallery-viewport"><div class="gallery-track" data-gallery-track>
-            {{ range $d.projects.dwsim_gallery }}<figure class="gallery-slide"><div class="gallery-image {{ .fit }}"><img src="{{ .src | relURL }}" alt="{{ .alt }}" width="1200" height="760" loading="lazy"></div><figcaption>{{ .caption }}</figcaption></figure>{{ end }}
-          </div></div>
-          <div class="gallery-controls"><button type="button" data-gallery-prev aria-label="{{ $d.projects.dwsim_gallery_prev }}">←</button><div class="gallery-dots" data-gallery-dots></div><button type="button" data-gallery-next aria-label="{{ $d.projects.dwsim_gallery_next }}">→</button></div>
-        </div>
-        <div class="dwsim-content"><span class="status-pill compact"><i></i>{{ $d.projects.dwsim_status }}</span><h3>{{ $d.projects.dwsim_title }}</h3><p class="project-lede">{{ $d.projects.dwsim_text }}</p><div class="metric-grid">{{ range $d.projects.dwsim_metrics }}<div><strong>{{ .value }}</strong><span>{{ .label }}</span></div>{{ end }}</div><p class="project-note complete-note">{{ $d.projects.dwsim_note }}</p><div class="tag-row">{{ range $d.projects.dwsim_tags }}<span class="tag">{{ . }}</span>{{ end }}</div><div class="button-row"><a class="button primary" href="{{ "projects/ethanol-recovery/" | relLangURL }}">{{ $d.projects.dwsim_case_cta }} <span>→</span></a><a class="button secondary" href="{{ "/reports/ethanol-water-recovery-diego-miralles.pdf" | relURL }}" download="ethanol-water-recovery-diego-miralles.pdf">{{ $d.projects.dwsim_report_cta }} <span>↓</span></a></div></div>
-      </article>
-    </div>
-  </section>
 
   <section class="section" id="capabilities">
     <div class="wrap">
       <div class="section-heading reveal"><p class="kicker">{{ $d.capabilities.kicker }}</p><h2>{{ $d.capabilities.title }}</h2></div>
-      <div class="capability-grid reveal">{{ range $index, $group := $d.capabilities.groups }}<article><span class="card-index">0{{ add $index 1 }}</span><h3>{{ $group.title }}</h3><ul>{{ range $group.items }}<li>{{ . }}</li>{{ end }}</ul></article>{{ end }}</div>
+      <div class="capability-grid reveal">{{ range $index, $group := $d.capabilities.groups }}<article><span class="card-index">0{{ add $index 1 }}</span><h3>{{ $group.title }}</h3><ul>{{ range $group.items }}<li>{{ . }}</li>{{ end }}</ul>{{ with $group.href }}<a class="text-link" href="{{ . | relLangURL }}">{{ $group.link }} →</a>{{ end }}</article>{{ end }}</div>
       <div class="language-panel reveal"><div><p class="micro-label">{{ $d.capabilities.languages_title }}</p><div class="language-list">{{ range $d.capabilities.languages }}<span>{{ . }}</span>{{ end }}</div></div>{{ with $d.capabilities.training }}<strong>{{ . }}</strong>{{ end }}</div>
     </div>
   </section>

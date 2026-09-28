@@ -1,50 +1,68 @@
-language_switch: "EN"
-language_switch_label: "View this case study in English"
-back: "Volver al portfolio"
-live: "Abrir beta funcional"
-live_note: "Alojada en Render; la beta puede tardar unos segundos en activarse tras un periodo de inactividad."
-status: "Beta privada funcional"
-kicker: "PeerScope / Caso de estudio / 2026"
-title: "De los datos financieros a un diagnóstico competitivo del sector químico."
-intro: "PeerScope es una plataforma de inteligencia competitiva para empresas de fabricación química. Convierte datos financieros en indicadores comparables, benchmarks, puntuaciones interpretables e informes orientados a la toma de decisiones."
-collaboration: "Cocreado por Diego Miralles y Javier Gonzálvez. Todas las cifras de esta página describen el conjunto de la plataforma compartida, no el trabajo individual de ninguno de los dos. Las métricas corresponden a septiembre de 2026."
-metrics:
-  - { value: "1.777", label: "empresas en el flujo de datos" }
-  - { value: "1.164", label: "puntuaciones competitivas válidas" }
-  - { value: "6", label: "dimensiones de puntuación interpretables" }
-  - { value: "194", label: "pruebas automatizadas" }
-  - { value: "11", label: "subpruebas específicas" }
-  - { value: "1", label: "Sector Pack de fabricación química" }
-hero_alt: "Interfaz sintética de benchmark y scoring competitivo de PeerScope para el sector químico"
-hero_caption: "Interfaz de benchmark y scoring competitivo mostrada con datos de demostración totalmente sintéticos."
-challenge_kicker: "01 / El reto"
-challenge_title: "Hacer comparables las cuentas de una empresa y comprensible el resultado."
-challenge_text: "Los registros financieros son útiles, pero no explican de forma inmediata cómo se sitúa una empresa frente a competidores relevantes. PeerScope estructura esa información en un recorrido analítico coherente centrado en comparación, interpretación y trazabilidad."
-sector_title: "Por qué importa el sector químico"
-sector_text: "La plataforma acota la comparación a la fabricación química, de modo que el benchmark se interpreta dentro de un contexto operativo relevante y no frente a una media genérica de sectores distintos."
-flow_kicker: "02 / Flujo del producto"
-flow_title: "Un recorrido claro desde el dato de origen hasta la visión ejecutiva."
+language_switch: EN
+language_switch_label: View this case study in English
+back: Volver al portfolio
+live: Acceder a la beta
+live_note: 'Beta privada: el acceso puede requerir autorización. El servicio de Render puede tardar en activarse tras un periodo
+  de inactividad.'
+status: Beta privada funcional
+kicker: PeerScope / Caso de estudio / 2026
+title: 'PeerScope: comparación de empresas químicas'
+intro: Plataforma para comparar indicadores financieros de empresas de fabricación química. Organiza datos, grupos de referencia
+  y resultados en paneles e informes.
+collaboration: Cocreado por Diego Miralles y Javier Gonzálvez. Todas las cifras de esta página describen el conjunto de la
+  plataforma compartida, no el trabajo individual de ninguno de los dos. Las métricas corresponden a septiembre de 2026.
+metrics: []
+hero_alt: Ilustración del benchmark con datos sintéticos.
+hero_caption: Ilustración del benchmark con datos sintéticos.
+challenge_kicker: 01 / El reto
+challenge_title: Hacer comparables las cuentas de una empresa y comprensible el resultado.
+challenge_text: Los registros financieros son útiles, pero no explican de forma inmediata cómo se sitúa una empresa frente
+  a competidores relevantes. PeerScope estructura esa información en un recorrido analítico coherente centrado en comparación,
+  interpretación y trazabilidad.
+sector_title: Por qué importa el sector químico
+sector_text: La plataforma acota la comparación a la fabricación química, de modo que el benchmark se interpreta dentro de
+  un contexto operativo relevante y no frente a una media genérica de sectores distintos.
+flow_kicker: 02 / Flujo del producto
+flow_title: Del registro financiero al informe
 flow:
-  - { n: "01", title: "Estructurar", text: "Preparar los registros financieros y normalizar los indicadores necesarios para comparar." }
-  - { n: "02", title: "Comparar", text: "Situar la empresa frente a su grupo de referencia y al conjunto del sector químico." }
-  - { n: "03", title: "Interpretar", text: "Traducir el rendimiento relativo en seis dimensiones de scoring y diagnósticos legibles." }
-  - { n: "04", title: "Comunicar", text: "Presentar el resultado mediante paneles e informes ejecutivos orientados a decisiones." }
-product_alt: "Interfaz sintética del producto PeerScope"
-product_caption: "La interfaz del producto explica el recorrido desde los datos financieros hasta el diagnóstico competitivo."
-evidence_kicker: "03 / Evidencia técnica"
-evidence_title: "La arquitectura hace visible el límite del análisis."
-evidence_text: "El producto separa la experiencia pública, el flujo analítico y las importaciones privadas. Esa separación permite inspeccionar mejor el recorrido desde la entrada hasta la puntuación y mantiene explícita la lógica del scoring."
-architecture_alt: "Diagrama de arquitectura y flujo analítico de PeerScope"
-architecture_caption: "Flujo analítico trazable; las importaciones privadas permanecen aisladas del scoring."
-stack_label: "Bloques analíticos visibles"
-stack: ["Base de datos SABI", "Normalización y validación", "KPI y reglas", "Grupos de referencia y percentiles", "Pruebas automatizadas", "Informes HTML/PDF"]
-scope_kicker: "04 / Alcance y autoría"
-scope_title: "Un producto compartido, presentado sin exagerar las aportaciones individuales."
-scope_text: "PeerScope aparece aquí porque Diego participó en la construcción del proyecto. Los resultados de plataforma se atribuyen expresamente a la colaboración, que es la forma más precisa de mostrar el trabajo."
-limitations_title: "Alcance actual"
+- n: '01'
+  title: Estructurar
+  text: Preparar los registros financieros y normalizar los indicadores necesarios para comparar.
+- n: '02'
+  title: Comparar
+  text: Situar la empresa frente a su grupo de referencia y al conjunto del sector químico.
+- n: '03'
+  title: Interpretar
+  text: Traducir el rendimiento relativo en seis dimensiones de scoring y diagnósticos legibles.
+- n: '04'
+  title: Comunicar
+  text: Presentar el resultado mediante paneles e informes ejecutivos orientados a decisiones.
+product_alt: Ilustración de la interfaz con datos sintéticos.
+product_caption: Ilustración de la interfaz con datos sintéticos.
+evidence_kicker: 03 / Arquitectura
+evidence_title: Separación del flujo analítico y las importaciones privadas
+evidence_text: El producto separa la experiencia pública, el flujo analítico y las importaciones privadas. Esa separación
+  permite inspeccionar mejor el recorrido desde la entrada hasta la puntuación y mantiene explícita la lógica del scoring.
+architecture_alt: Diagrama de arquitectura y flujo analítico de PeerScope
+architecture_caption: Flujo analítico trazable; las importaciones privadas permanecen aisladas del scoring.
+stack_label: Bloques analíticos visibles
+stack:
+- Base de datos SABI
+- Normalización y validación
+- KPI y reglas
+- Grupos de referencia y percentiles
+- Pruebas automatizadas
+- Informes HTML/PDF
+scope_kicker: 04 / Alcance y autoría
+scope_title: Un producto compartido, presentado sin exagerar las aportaciones individuales.
+scope_text: PeerScope aparece aquí porque Diego participó en la construcción del proyecto. Los resultados de plataforma se
+  atribuyen expresamente a la colaboración, que es la forma más precisa de mostrar el trabajo.
+limitations_title: Alcance actual
 limitations:
-  - "Las pantallas públicas utilizan datos de demostración totalmente sintéticos."
-  - "El producto se presenta como beta privada funcional, no como servicio comercial terminado."
-  - "Sus diagnósticos apoyan el análisis; no sustituyen el criterio financiero o estratégico especializado."
-collaborator: "Ver la presentación de PeerScope de Javier"
-closing_title: "Explora el producto funcional o vuelve al portfolio completo."
+- Las dos vistas de interfaz son ilustraciones elaboradas para el portfolio con datos sintéticos, no capturas del producto
+  en uso.
+- El producto se presenta como beta privada funcional, no como servicio comercial terminado.
+- Sus diagnósticos apoyan el análisis; no sustituyen el criterio financiero o estratégico especializado.
+- El código, los datos originales y las pruebas de la plataforma no se publican en este repositorio.
+collaborator: Ver la presentación de PeerScope de Javier
+closing_title: Acceso a PeerScope

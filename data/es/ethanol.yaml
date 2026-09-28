@@ -1,93 +1,196 @@
-back: "Volver al portfolio"
-language_switch: "EN"
-language_switch_label: "Switch to English"
-report_cta: "Descargar informe técnico"
-header_report_cta: "Informe"
-kicker: "Simulación de procesos / 2026"
-status: "Caso de estudio completado"
-title: "Recuperación de etanol mediante separación flash y destilación"
-intro: "Estudio reproducible en DWSIM sobre cómo la temperatura de salida del calentador modifica la recuperación de etanol, la pureza del vapor y la energía específica en un flash agua-etanol, seguido de un escenario exploratorio independiente de destilación multietapa."
-scope_note: "Proyecto académico personal. El flash y la columna utilizan alimentaciones diferentes y se interpretan como estudios complementarios, no como una comparación energética directa."
+back: Volver al portfolio
+language_switch: EN
+language_switch_label: Switch to English
+report_cta: Descargar informe técnico
+header_report_cta: Informe
+kicker: Simulación de procesos / 2026
+status: Estudio académico personal · 2026
+title: Recuperación de etanol mediante separación flash y destilación
+intro: Estudio reproducible en DWSIM sobre cómo la temperatura de salida del calentador modifica la recuperación de etanol,
+  la pureza del vapor y la energía específica en un flash agua-etanol, seguido de un escenario exploratorio independiente
+  de destilación multietapa.
+scope_note: Proyecto académico personal. El flash y la columna utilizan alimentaciones diferentes y se interpretan como estudios
+  complementarios, no como una comparación energética directa.
 metrics:
-  - { value: "88 °C", label: "condición flash seleccionada" }
-  - { value: "58,4%", label: "etanol recuperado en el vapor" }
-  - { value: "62,0% masa", label: "pureza de etanol en el vapor" }
-  - { value: "1,098", label: "kWh por kg de EtOH recuperado" }
-  - { value: "0,266%", label: "máximo error absoluto de EtOH" }
-  - { value: "8 / 8", label: "comprobaciones documentales conformes" }
-hero_alt: "Flowsheet de DWSIM para el caso de referencia flash de etanol y agua a 87 grados Celsius"
-hero_caption: "Flowsheet de referencia a 87 °C: Feed → H-1 → corriente bifásica → SEP-1 → vapor + líquido. La tabla flotante muestra composición molar; los KPI del portfolio utilizan base másica."
-
-question_kicker: "01 / Pregunta de ingeniería"
-question_title: "¿Cuánto etanol puede recuperar un flash sencillo antes de penalizar la calidad del producto y el consumo?"
-question_text: "El caso principal alimenta 100 kg/h con 30% en masa de etanol a 25 °C y 1 bar. Solo cambia la temperatura de salida del calentador. Siete simulaciones entre 82 y 92 °C identifican cuándo aparece vapor y cuantifican el equilibrio entre recuperación, pureza y carga térmica."
-decision_title: "Criterio de decisión"
-decision_text: "Maximizar únicamente la recuperación no es el objetivo: una vaporización más intensa también arrastra más agua por cabeza. La condición elegida es el mejor compromiso medido entre los casos ensayados, no una optimización global."
-
-method_kicker: "02 / Método reproducible"
-method_title: "Un barrido controlado con balances trazables."
+- value: 88 °C
+  label: condición flash seleccionada
+- value: 58,4%
+  label: etanol recuperado en el vapor
+- value: 62,0% masa
+  label: pureza de etanol en el vapor
+- value: 1,098
+  label: kWh por kg de EtOH recuperado
+hero_alt: Flowsheet de DWSIM para el caso de referencia flash de etanol y agua a 87 grados Celsius
+hero_caption: 'Flowsheet de referencia a 87 °C: Feed → H-1 → corriente bifásica → SEP-1 → vapor + líquido. La tabla flotante
+  muestra composición molar; los KPI del portfolio utilizan base másica.'
+question_kicker: 01 / Pregunta de ingeniería
+question_title: ¿Cuánto etanol puede recuperar un flash sencillo antes de penalizar la calidad del producto y el consumo?
+question_text: El caso principal alimenta 100 kg/h con 30% en masa de etanol a 25 °C y 1 bar. Solo cambia la temperatura de
+  salida del calentador. Siete simulaciones entre 82 y 92 °C identifican cuándo aparece vapor y cuantifican el equilibrio
+  entre recuperación, pureza y carga térmica.
+decision_title: Criterio de decisión
+decision_text: Seleccioné 88 °C porque presentó la menor energía específica entre los cinco casos bifásicos ensayados, manteniendo
+  un 62,0% en masa de etanol en el vapor. Es una elección dentro del barrido de simulación, no un óptimo global ni una condición
+  validada en planta.
+method_kicker: 02 / Método reproducible
+method_title: Un barrido controlado con balances trazables.
 method:
-  - { n: "01", title: "Fijar la alimentación", text: "100 kg/h, 30% masa de etanol, 70% masa de agua, 25 °C y 1 bar." }
-  - { n: "02", title: "Modelar la no idealidad", text: "Agua y etanol se representan con el modelo de coeficientes de actividad NRTL en DWSIM 9.0.5." }
-  - { n: "03", title: "Barrer la temperatura", text: "Resolver 82, 84, 86, 87, 88, 90 y 92 °C manteniendo constantes el resto de entradas del flash." }
-  - { n: "04", title: "Verificar y comparar", text: "Cerrar los balances total, de etanol y de agua; después comparar recuperación, pureza, carga térmica y energía específica." }
-
-results_kicker: "03 / Sensibilidad del flash"
-results_title: "Más recuperación implica menor pureza del vapor."
-results_text: "A 82 y 84 °C no se formó vapor. En los cinco casos bifásicos la recuperación aumentó del 34,6% al 85,3%, mientras la pureza del etanol en el vapor descendió del 67,4% al 48,5% en masa."
-tradeoff_alt: "Gráfico en el que la recuperación de etanol aumenta y la pureza del vapor disminuye con la temperatura del flash"
-tradeoff_caption: "Representación con escala térmica continua de los cinco casos bifásicos válidos. El caso destacado de 88 °C presenta la menor energía específica observada en el intervalo ensayado."
-flash_table_label: "Resultados de sensibilidad del flash"
-flash_headers: ["T", "Vapor", "Pureza EtOH", "Recuperación EtOH", "Carga H-1", "Energía específica"]
+- n: '01'
+  title: Fijar la alimentación
+  text: 100 kg/h, 30% masa de etanol, 70% masa de agua, 25 °C y 1 bar.
+- n: '02'
+  title: Modelar la no idealidad
+  text: Agua y etanol se representan con el modelo de coeficientes de actividad NRTL en DWSIM 9.0.5.
+- n: '03'
+  title: Barrer la temperatura
+  text: Resolver 82, 84, 86, 87, 88, 90 y 92 °C manteniendo constantes el resto de entradas del flash.
+- n: '04'
+  title: Verificar y comparar
+  text: Cerrar los balances total, de etanol y de agua; después comparar recuperación, pureza, carga térmica y energía específica.
+results_kicker: 03 / Sensibilidad del flash
+results_title: Más recuperación implica menor pureza del vapor.
+results_text: En la simulación, a 82 y 84 °C no se formó vapor. En los cinco casos bifásicos, la recuperación aumentó del
+  34,6% al 85,3% y la pureza del vapor descendió del 67,4% al 48,5% en masa.
+tradeoff_alt: Gráfico en el que la recuperación de etanol aumenta y la pureza del vapor disminuye con la temperatura del flash
+tradeoff_caption: Representación con escala térmica continua de los cinco casos bifásicos válidos. El caso destacado de 88
+  °C presenta la menor energía específica observada en el intervalo ensayado.
+flash_table_label: Resultados de sensibilidad del flash
+flash_headers:
+- T
+- Vapor
+- Pureza EtOH
+- Recuperación EtOH
+- Carga H-1
+- Energía específica
 flash_cases:
-  - ["86 °C", "15,410 kg/h", "67,37% masa", "34,60%", "13,710 kW", "1,321 kWh/kg"]
-  - ["87 °C", "22,200 kg/h", "64,80% masa", "47,95%", "16,520 kW", "1,148 kWh/kg"]
-  - ["88 °C", "28,258 kg/h", "62,00% masa", "58,40%", "19,230 kW", "1,098 kWh/kg"]
-  - ["90 °C", "39,600 kg/h", "55,88% masa", "73,76%", "24,960 kW", "1,128 kWh/kg"]
-  - ["92 °C", "52,730 kg/h", "48,54% masa", "85,32%", "32,210 kW", "1,258 kWh/kg"]
-selected_title: "¿Por qué 88 °C?"
-selected_text: "Frente al caso de referencia de 87 °C, eleva la recuperación del 48,0% al 58,4%, conserva una pureza del 62,0% en masa y reduce la energía específica de 1,148 a 1,098 kWh/kg. Subir a 92 °C recuperaría más etanol, pero la pureza caería al 48,5% y la carga térmica aumentaría a 32,21 kW."
-
-column_kicker: "04 / Extensión con destilación"
-column_title: "Más separación, con rendimientos energéticos decrecientes."
-column_text: "El estudio independiente de columna empleó 100 mol/s, 50% molar de etanol y 350 K. Como esa alimentación no coincide con la del flash, sus consumos no pueden compararse directamente. Dentro del barrido de reflujo registrado, aumentar el reflujo mejoró la composición del destilado, pero la carga térmica del rehervidor creció mucho más deprisa."
-column_alt: "Esquema simplificado de una columna de destilación agua-etanol con condensador, rehervidor, alimentación, destilado y fondos"
-column_caption: "Representación simplificada del escenario de columna C-01 registrado. Es un estudio exploratorio con etapas de equilibrio, no un diseño mecánico del proceso."
-column_table_label: "Sensibilidad de reflujo registrada"
-column_headers: ["Caso", "Relación de reflujo", "xEtOH destilado (fracción molar)", "Carga del rehervidor", "Estado"]
+- - 86 °C
+  - 15,410 kg/h
+  - 67,37% masa
+  - 34,60%
+  - 13,710 kW
+  - 1,321 kWh/kg
+- - 87 °C
+  - 22,200 kg/h
+  - 64,80% masa
+  - 47,95%
+  - 16,520 kW
+  - 1,148 kWh/kg
+- - 88 °C
+  - 28,258 kg/h
+  - 62,00% masa
+  - 58,40%
+  - 19,230 kW
+  - 1,098 kWh/kg
+- - 90 °C
+  - 39,600 kg/h
+  - 55,88% masa
+  - 73,76%
+  - 24,960 kW
+  - 1,128 kWh/kg
+- - 92 °C
+  - 52,730 kg/h
+  - 48,54% masa
+  - 85,32%
+  - 32,210 kW
+  - 1,258 kWh/kg
+selected_title: ¿Por qué 88 °C?
+selected_text: Frente al caso de referencia de 87 °C, eleva la recuperación del 48,0% al 58,4%, conserva una pureza del 62,0%
+  en masa y reduce la energía específica de 1,148 a 1,098 kWh/kg. Subir a 92 °C recuperaría más etanol, pero la pureza caería
+  al 48,5% y la carga térmica aumentaría a 32,21 kW.
+column_kicker: 04 / Extensión con destilación
+column_title: Más separación, con rendimientos energéticos decrecientes.
+column_text: El estudio independiente de columna empleó 100 mol/s, 50% molar de etanol y 350 K. Como esa alimentación no coincide
+  con la del flash, sus consumos no pueden compararse directamente. Dentro del barrido de reflujo registrado, aumentar el
+  reflujo mejoró la composición del destilado, pero la carga térmica del rehervidor creció mucho más deprisa.
+column_alt: Esquema simplificado de una columna de destilación agua-etanol con condensador, rehervidor, alimentación, destilado
+  y fondos
+column_caption: Representación simplificada del escenario de columna C-01 registrado. Es un estudio exploratorio con etapas
+  de equilibrio, no un diseño mecánico del proceso.
+column_table_label: Sensibilidad de reflujo registrada
+column_headers:
+- Caso
+- Relación de reflujo
+- xEtOH destilado (fracción molar)
+- Carga del rehervidor
+- Estado
 column_cases:
-  - ["C-01", "2", "0,8057", "2.986,14 kW", "Converge"]
-  - ["C-02", "3", "0,8201", "3.965,37 kW", "Converge"]
-  - ["C-03", "5", "0,8308", "5.926,48 kW", "Converge"]
-column_finding: "De una relación de reflujo 2 a 5, la composición del destilado mejoró 2,51 puntos porcentuales mientras la carga térmica del rehervidor aumentó un 98,5%. El resultado de corriente C-01 equivale a un 91,38% en masa de etanol en el destilado."
-
-validation_kicker: "05 / Verificación y seguridad"
-validation_title: "Los resultados se comprobaron antes de interpretarlos."
-validation_text: "El libro de cálculo reconcilia la masa total y ambos componentes en cada caso flash válido. La referencia de 87 °C cierra con 100,000 kg/h a la entrada y a la salida; el mayor error absoluto de etanol del barrido es 0,2664%, por debajo del criterio de aceptación del 0,5%."
+- - C-01
+  - '2'
+  - 0,8057
+  - 2.986,14 kW
+  - Converge
+- - C-02
+  - '3'
+  - 0,8201
+  - 3.965,37 kW
+  - Converge
+- - C-03
+  - '5'
+  - 0,8308
+  - 5.926,48 kW
+  - Converge
+column_finding: De una relación de reflujo 2 a 5, la composición del destilado mejoró 2,51 puntos porcentuales mientras la
+  carga térmica del rehervidor aumentó un 98,5%. El resultado de corriente C-01 equivale a un 91,38% en masa de etanol en
+  el destilado.
+validation_kicker: 05 / Verificación y seguridad
+validation_title: Los resultados se comprobaron antes de interpretarlos.
+validation_text: El libro de cálculo reconcilia la masa total y ambos componentes en cada caso flash válido. La referencia
+  de 87 °C cierra con 100,000 kg/h a la entrada y a la salida; el mayor error absoluto de etanol del barrido es 0,2664%, por
+  debajo del criterio de aceptación del 0,5%.
 validation_cards:
-  - { value: "100,000", label: "kg/h de entrada y salida a 87 °C", text: "Cierre total del caso de referencia." }
-  - { value: "< 0,5%", label: "criterio de balance de componentes", text: "Todos los casos flash válidos permanecen dentro de tolerancia." }
-  - { value: "8 / 8", label: "requisitos documentados", text: "Modelo, alimentación, balances, escenarios, trazabilidad y limitaciones comprobados." }
-  - { value: "10", label: "desviaciones HAZOP educativas", text: "Escenarios de mayor puntuación: sobrepresión, fuga de mezcla y nivel alto en el separador." }
-safety_note: "El HAZOP es un ejercicio cualitativo con fines educativos. No sustituye una revisión profesional de seguridad de procesos, el diseño de alivio, la clasificación de áreas ni una validación multidisciplinar."
-
-limitations_kicker: "06 / Alcance y limitaciones"
-limitations_title: "Qué demuestra el estudio — y qué no."
+- value: 100,000
+  label: kg/h de entrada y salida a 87 °C
+  text: Cierre total del caso de referencia.
+- value: < 0,5%
+  label: criterio de balance de componentes
+  text: Todos los casos flash válidos permanecen dentro de tolerancia.
+- value: 8 / 8
+  label: requisitos documentados
+  text: Modelo, alimentación, balances, escenarios, trazabilidad y limitaciones comprobados.
+- value: '10'
+  label: desviaciones HAZOP educativas
+  text: 'Escenarios de mayor puntuación: sobrepresión, fuga de mezcla y nivel alto en el separador.'
+safety_note: El HAZOP es un ejercicio cualitativo con fines educativos. No sustituye una revisión profesional de seguridad
+  de procesos, el diseño de alivio, la clasificación de áreas ni una validación multidisciplinar.
+limitations_kicker: 06 / Alcance y limitaciones
+limitations_title: Qué demuestra el estudio — y qué no.
 limitations:
-  - "Modelo binario agua-etanol en estado estacionario con NRTL; no incluye impurezas ni variabilidad de la alimentación."
-  - "No se representan pérdidas de calor, tuberías auxiliares ni caídas de presión distintas de las indicadas."
-  - "El recipiente flash y la columna no están dimensionados mecánicamente y no se incluye análisis CAPEX/OPEX."
-  - "No existe validación experimental; los resultados dependen del modelo termodinámico y de los supuestos de equilibrio."
-  - "Las alimentaciones del flash y la columna difieren en caudal, composición y temperatura, por lo que sus consumos se analizan por separado."
-source_title: "Documentación y archivos reproducibles"
-source_text: "El informe reúne la interpretación técnica. El libro de cálculo permite auditar balances, sensibilidad, gráficos y HAZOP; los dos modelos DWSIM conservan los escenarios resueltos de flash y columna."
+- Modelo binario agua-etanol en estado estacionario con NRTL; no incluye impurezas ni variabilidad de la alimentación.
+- No se representan pérdidas de calor, tuberías auxiliares ni caídas de presión distintas de las indicadas.
+- El recipiente flash y la columna no están dimensionados mecánicamente y no se incluye análisis CAPEX/OPEX.
+- No existe validación experimental; los resultados dependen del modelo termodinámico y de los supuestos de equilibrio.
+- Las alimentaciones del flash y la columna difieren en caudal, composición y temperatura, por lo que sus consumos se analizan
+  por separado.
+source_title: Documentación y archivos reproducibles
+source_text: El informe reúne la interpretación técnica. El libro de cálculo permite auditar balances, sensibilidad, gráficos
+  y HAZOP; los dos modelos DWSIM conservan los escenarios resueltos de flash y columna.
 downloads:
-  - { type: "PDF", label: "Informe técnico", meta: "10 páginas · lectura y descarga", href: "/reports/ethanol-water-recovery-diego-miralles.pdf", filename: "ethanol-water-recovery-diego-miralles.pdf" }
-  - { type: "XLSX", label: "Libro de cálculo", meta: "Balances, sensibilidad, gráficos y verificación", href: "/files/ethanol-water-calculations.xlsx", filename: "ethanol-water-calculations.xlsx" }
-  - { type: "DWSIM", label: "Modelo flash", meta: "Caso de referencia agua–etanol", href: "/files/ethanol-water-flash.dwxmz", filename: "ethanol-water-flash.dwxmz" }
-  - { type: "DWSIM", label: "Modelo de columna", meta: "Escenario independiente de destilación", href: "/files/ethanol-water-distillation-column.dwxmz", filename: "ethanol-water-distillation-column.dwxmz" }
-download_note: "El Excel se abre con Microsoft Excel o una aplicación compatible. Los modelos se descargan y requieren DWSIM 9.0.5 o una versión compatible; no se visualizan directamente en el navegador. Las copias públicas no contienen rutas locales ni el nombre del equipo."
-files_jump_cta: "Archivos del proyecto"
-
-closing_title: "Un estudio completado alrededor de la reproducibilidad, los compromisos y el criterio de ingeniería."
-closing_text: "El informe, el Excel y los dos modelos DWSIM permiten pasar del resumen público a la evidencia técnica reproducible."
+- type: PDF
+  label: Informe técnico
+  meta: 10 páginas · lectura y descarga
+  href: /reports/ethanol-water-recovery-diego-miralles.pdf
+  filename: ethanol-water-recovery-diego-miralles.pdf
+- type: XLSX
+  label: Libro de cálculo
+  meta: Balances, sensibilidad, gráficos y verificación
+  href: /files/ethanol-water-calculations.xlsx
+  filename: ethanol-water-calculations.xlsx
+- type: DWSIM
+  label: Modelo flash
+  meta: Caso de referencia agua–etanol
+  href: /files/ethanol-water-flash.dwxmz
+  filename: ethanol-water-flash.dwxmz
+- type: DWSIM
+  label: Modelo de columna
+  meta: Escenario independiente de destilación
+  href: /files/ethanol-water-distillation-column.dwxmz
+  filename: ethanol-water-distillation-column.dwxmz
+download_note: El Excel se abre con Microsoft Excel o una aplicación compatible. Los modelos se descargan y requieren DWSIM
+  9.0.5 o una versión compatible; no se visualizan directamente en el navegador. Las copias públicas no contienen rutas locales
+  ni el nombre del equipo.
+files_jump_cta: Archivos del proyecto
+closing_title: Consultar el informe y reproducir los casos
+closing_text: El informe, el Excel y los dos modelos DWSIM permiten pasar del resumen público a la evidencia técnica reproducible.
+contribution_title: Mi trabajo en este estudio
+contribution_text: Comparación de los casos de simulación, cálculo de balances e indicadores en Excel e interpretación en
+  el informe técnico. El estudio usa DWSIM y sus tutoriales como recursos de partida; las fuentes están recogidas en el informe.

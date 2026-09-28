@@ -1,101 +1,158 @@
 nav:
-  - { label: "Profile", id: "profile" }
-  - { label: "Education", id: "education" }
-  - { label: "Experience", id: "experience" }
-  - { label: "Projects", id: "projects" }
-  - { label: "Capabilities", id: "capabilities" }
-  - { label: "Contact", id: "contact" }
-menu_label: "Open navigation menu"
-availability: "Open to internship opportunities"
-location: "Alicante, Spain"
-hero_kicker: "01 / Process-led thinking"
-hero_title: "Chemical engineering applied to real problems."
-hero_intro: "Chemical Engineering student at the University of Alicante with hands-on exposure to chemical production and completed technical work in process simulation and engineering analysis."
-primary_cta: "Explore my work"
-cv_cta: "Resume"
-github_cta: "GitHub profile"
-visual_label: "Engineering focus"
-visual_title: "From fundamentals to industrial context"
-visual_nodes:
-  - { n: "01", title: "Analyse", text: "Balances · thermodynamics" }
-  - { n: "02", title: "Model", text: "DWSIM · MATLAB" }
-  - { n: "03", title: "Improve", text: "Safety · decisions" }
-evidence:
-  - { label: "Industrial exposure", value: "Chemical production environment" }
-  - { label: "Core toolkit", value: "DWSIM · MATLAB · Excel" }
-  - { label: "Languages", value: "Spanish · Valencian · English · German" }
+- label: Projects
+  id: projects
+- label: Experience
+  id: experience
+- label: Education
+  id: education
+- label: Profile
+  id: profile
+- label: Capabilities
+  id: capabilities
+- label: Contact
+  id: contact
+menu_label: Open navigation menu
+availability: Open to internship opportunities
+location: Alicante, Spain
+hero_kicker: Diego Miralles · Universidad de Alicante
+hero_title: Chemical Engineering student.
+hero_intro: I have worked as a plant operator at Químicas Sanz. Here I present my DWSIM study of ethanol-water separation
+  and PeerScope, a platform for analysing chemical companies.
+primary_cta: View projects and files
+cv_cta: CV (English)
+github_cta: GitHub profile
 profile:
-  kicker: "02 / Profile"
-  title: "A safety-conscious engineer in the making."
-  text: "My foundation combines material and energy balances, thermodynamics and process analysis with first-hand awareness of plant procedures, teamwork and operational discipline. I am particularly interested in process engineering, chemical manufacturing and the pharmaceutical industry."
-  tags: ["Material & energy balances", "Thermodynamics", "Process analysis", "Safety-conscious"]
+  kicker: Profile
+  title: What I want to work on
+  text: I am looking for internships in process engineering, chemical manufacturing or the pharmaceutical industry. I want
+    to connect my coursework in balances and thermodynamics with plant operating conditions.
+  tags: []
 education:
-  kicker: "03 / Education"
-  title: "BSc in Chemical Engineering"
-  school: "University of Alicante · 2024 — Present"
-  text: "Developing a rigorous foundation across process calculations, chemical science and quantitative analysis, with practical tools introduced alongside core engineering principles."
-  coursework_label: "Relevant foundations"
-  coursework: ["Material & energy balances", "Thermodynamics", "Physical chemistry", "Organic chemistry", "Mathematics", "Physics"]
+  kicker: Education
+  title: BSc in Chemical Engineering
+  school: University of Alicante · 2024 — Present
+  text: Coursework in material and energy balances, thermodynamics, chemistry and quantitative methods. My personal DWSIM
+    study applies some of these topics to ethanol-water separation.
+  coursework_label: Relevant foundations
+  coursework:
+  - Material & energy balances
+  - Thermodynamics
+  - Physical chemistry
+  - Organic chemistry
+  - Mathematics
+  - Physics
 experience:
-  kicker: "04 / Industrial experience"
-  title: "Chemical Plant Operator"
-  company: "Químicas Sanz · Spain"
+  kicker: Industrial experience
+  title: Chemical Plant Operator
+  company: Químicas Sanz · Spain
   points:
-    - "Supported day-to-day activities in a chemical production environment."
-    - "Followed established operating procedures and occupational safety requirements."
-    - "Worked alongside plant personnel to support safe, orderly and efficient operations."
+  - Supported daily chemical production activities.
+  - Followed plant operating procedures and occupational safety requirements.
+  - Worked with plant personnel during production operations.
 projects:
-  kicker: "05 / Selected projects"
-  title: "Applied work across competitive intelligence and process simulation."
-  peer_status: "Functional private beta"
-  peer_title: "PeerScope — Competitive Intelligence Platform"
-  peer_visual: "Chemical-sector benchmarking, diagnostics and executive reporting."
-  peer_text: "A competitive-intelligence platform focused on chemical manufacturing companies. It transforms financial records into comparable KPIs, peer-group benchmarks, interpretable competitive scores, diagnostics and executive reports."
-  peer_metrics:
-    - { value: "1,777", label: "companies in the data pipeline" }
-    - { value: "1,164", label: "valid competitive scores" }
-    - { value: "6", label: "interpretable scoring dimensions" }
-  peer_tags: ["Chemical manufacturing", "Financial analytics", "Competitive benchmarking", "Executive reporting"]
-  case_cta: "View full case study"
-  live_cta: "Open functional beta"
-  live_note: "Hosted on Render; the beta may take a few seconds to wake after inactivity."
-  gallery_label: "PeerScope product views"
-  gallery_prev: "Previous product view"
-  gallery_next: "Next product view"
+  kicker: Selected projects
+  title: Projects and documentation
+  peer_status: Functional private beta
+  peer_title: PeerScope · Chemical company analysis
+  peer_visual: Chemical-sector benchmarking, diagnostics and executive reporting.
+  peer_text: A platform for comparing financial indicators of chemical manufacturing companies. It organises data, peer groups
+    and results into dashboards and reports.
+  peer_metrics: []
+  peer_tags:
+  - SABI
+  - KPI
+  - Benchmarking
+  case_cta: View full case study
+  live_cta: Visit the beta
+  live_note: 'Private beta: access may require authorisation. The Render service may take time to wake after inactivity.'
+  gallery_label: PeerScope product views
+  gallery_prev: Previous product view
+  gallery_next: Next product view
   gallery:
-    - { src: "/projects/peerscope-dashboard.svg", alt: "Synthetic PeerScope chemical-sector benchmark dashboard", caption: "Sector benchmark and competitive scoring with clearly synthetic demonstration data.", fit: "cover" }
-    - { src: "/projects/peerscope-product.svg", alt: "Synthetic PeerScope product interface", caption: "Product view: from financial records to an interpretable competitive diagnosis.", fit: "cover" }
-    - { src: "/projects/peerscope-architecture.svg", alt: "PeerScope analytical architecture and data flow", caption: "Traceable analytical flow; private imports remain isolated from scoring.", fit: "contain" }
-  dwsim_status: "Completed technical study"
-  dwsim_title: "Ethanol Recovery — Flash & Distillation"
-  dwsim_text: "A DWSIM study of ethanol-water separation, testing how flash temperature changes recovery, vapour purity and specific energy, with a separate exploratory distillation extension."
-  dwsim_note: "Selected flash compromise: 88 °C. Results are supported by component balances, a documented sensitivity sweep and an educational HAZOP review."
-  dwsim_tags: ["DWSIM", "NRTL", "Process simulation", "Sensitivity analysis", "Mass balances"]
+  - src: /projects/peerscope-dashboard.svg
+    alt: Benchmark illustration using synthetic data.
+    caption: Benchmark illustration using synthetic data.
+    fit: contain
+  - src: /projects/peerscope-product.svg
+    alt: Interface illustration using synthetic data.
+    caption: Interface illustration using synthetic data.
+    fit: contain
+  - src: /projects/peerscope-architecture.svg
+    alt: PeerScope analytical architecture and data flow
+    caption: Traceable analytical flow; private imports remain isolated from scoring.
+    fit: contain
+  dwsim_status: Personal academic study · 2026
+  dwsim_title: Ethanol Recovery — Flash & Distillation
+  dwsim_text: An ethanol-water separation simulation in DWSIM. I compared seven flash temperatures and documented their effect
+    on recovery, purity and energy use.
+  dwsim_note: I selected 88 °C for its lowest specific energy among the cases tested. Component balances remain within the
+    0.5% tolerance. The model has not been experimentally validated.
+  dwsim_tags:
+  - DWSIM 9.0.5
+  - NRTL
+  - Excel
   dwsim_metrics:
-    - { value: "58.4%", label: "ethanol recovery at 88 °C" }
-    - { value: "62.0 wt%", label: "ethanol purity in vapour" }
-    - { value: "1.098", label: "kWh/kg recovered EtOH" }
-  dwsim_case_cta: "View full case study"
-  dwsim_report_cta: "Download report"
-  dwsim_gallery_label: "Ethanol recovery project views"
-  dwsim_gallery_prev: "Previous project view"
-  dwsim_gallery_next: "Next project view"
+  - value: 58.4%
+    label: ethanol recovery at 88 °C
+  - value: 62.0 wt%
+    label: ethanol purity in vapour
+  - value: '1.098'
+    label: kWh/kg recovered EtOH
+  dwsim_case_cta: View full case study
+  dwsim_report_cta: Download report
+  dwsim_gallery_label: Ethanol recovery project views
+  dwsim_gallery_prev: Previous project view
+  dwsim_gallery_next: Next project view
   dwsim_gallery:
-    - { src: "/projects/ethanol-flash-dwsim.png", alt: "DWSIM flowsheet of the ethanol-water flash reference case", caption: "Reference flowsheet: feed, heater, two-phase stream and flash separator.", fit: "contain" }
-    - { src: "/projects/ethanol-tradeoff-en.svg", alt: "Ethanol recovery and vapour purity across flash temperatures", caption: "The temperature sweep makes the recovery-purity trade-off visible and identifies the measured 88 °C compromise.", fit: "cover" }
-    - { src: "/projects/ethanol-column-schematic.svg", alt: "Simplified ethanol-water distillation column", caption: "A separate multistage scenario explores the purity gain and energy cost of higher reflux.", fit: "cover" }
+  - src: /projects/ethanol-flash-dwsim.png
+    alt: DWSIM flowsheet of the ethanol-water flash reference case
+    caption: 'Reference flowsheet: feed, heater, two-phase stream and flash separator.'
+    fit: contain
+  - src: /projects/ethanol-tradeoff-en.svg
+    alt: Ethanol recovery and vapour purity across flash temperatures
+    caption: 'Simulation sweep: increasing temperature raises recovery and reduces vapour purity.'
+    fit: contain
+  - src: /projects/ethanol-column-schematic.svg
+    alt: Simplified ethanol-water distillation column
+    caption: A separate multistage scenario explores the purity gain and energy cost of higher reflux.
+    fit: contain
+  peer_note: The images are portfolio illustrations with synthetic data, not screenshots of analyses of real companies.
+  dwsim_conditions: 'Simulation results at 88 °C and 1 bar. Feed: 100 kg/h, 30 wt% ethanol, entering at 25 °C.'
 capabilities:
-  kicker: "06 / Capabilities"
-  title: "Technical foundations with industrial context."
+  kicker: Capabilities
+  title: Tools and how I use them
   groups:
-    - { title: "Process engineering", items: ["Material & energy balances", "Thermodynamics", "Process analysis"] }
-    - { title: "Software & data", items: ["DWSIM", "MATLAB", "Microsoft Excel"] }
-    - { title: "Technical delivery", items: ["Technical documentation", "Teamwork", "Attention to detail"] }
-  languages_title: "Languages"
-  languages: ["Spanish · Native", "Valencian · C1", "English · B2", "German · A2 → B1"]
+  - title: DWSIM
+    items:
+    - NRTL model of an ethanol-water mixture.
+    - Temperature sweep and a separate distillation scenario.
+    href: projects/ethanol-recovery/
+    link: View the simulation
+  - title: Excel
+    items:
+    - Mass balances and specific energy calculations.
+    - Scenario comparisons and a record of checks.
+    href: projects/ethanol-recovery/#downloads
+    link: View the calculation workbook
+  - title: MATLAB
+    items:
+    - Used in coursework and exercises.
+    - No MATLAB project published in this portfolio.
+  languages_title: Languages
+  languages:
+  - Spanish · Native
+  - Valencian · C1
+  - English · B2
+  - German · A2 → B1
 contact:
-  kicker: "07 / Contact"
-  title: "Interested in process, manufacturing and pharmaceutical opportunities."
-  text: "I am building a portfolio of practical chemical engineering work and welcome conversations about internships, technical projects and international opportunities."
-  email: "Email Diego"
-  github: "View GitHub"
+  kicker: Contact
+  title: Internship enquiries
+  text: I am interested in process, chemical manufacturing and pharmaceutical opportunities, including internships outside
+    Spain. You can reach me by email.
+  email: Email Diego
+  github: View GitHub
+featured_label: Personal study · DWSIM
+featured_title: Ethanol recovery
+featured_caption: 'Simulated results: 100 kg/h, 30 wt% ethanol, 1 bar. At 88 °C, specific energy is lowest among the cases
+  tested; increasing recovery reduces purity.'
+featured_cta: View method, results and models

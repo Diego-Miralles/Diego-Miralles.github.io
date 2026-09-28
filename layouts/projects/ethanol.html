@@ -19,9 +19,9 @@
       <a class="back-link" href="{{ "" | relLangURL }}">← {{ $d.back }}</a>
       <div class="case-title-grid reveal">
         <div><p class="kicker">{{ $d.kicker }}</p><span class="status-pill compact"><i></i>{{ $d.status }}</span><h1>{{ $d.title }}</h1></div>
-        <div class="case-intro"><p>{{ $d.intro }}</p><strong>{{ $d.scope_note }}</strong></div>
+        <div class="case-intro"><p>{{ $d.intro }}</p><strong>{{ $d.scope_note }}</strong><p class="metric-context">{{ if eq $lang "es" }}Resultados simulados a 88 °C · 1 bar · 100 kg/h · 30% masa EtOH · entrada a 25 °C.{{ else }}Simulated results at 88 °C · 1 bar · 100 kg/h · 30 wt% EtOH · inlet at 25 °C.{{ end }}</p></div>
       </div>
-      <div class="case-metrics reveal">{{ range $d.metrics }}<div><strong>{{ .value }}</strong><span>{{ .label }}</span></div>{{ end }}</div>
+      {{ with $d.metrics }}<div class="case-metrics reveal">{{ range . }}<div><strong>{{ .value }}</strong><span>{{ .label }}</span></div>{{ end }}</div>{{ end }}
     </div>
   </section>
 
@@ -39,7 +39,7 @@
   <section class="section surface">
     <div class="wrap">
       <div class="section-heading reveal"><p class="kicker">{{ $d.method_kicker }}</p><h2>{{ $d.method_title }}</h2></div>
-      <div class="flow-grid reveal">{{ range $d.method }}<article><div><span class="flow-icon">{{ .n }}</span><small>{{ .n }}</small></div><h3>{{ .title }}</h3><p>{{ .text }}</p></article>{{ end }}</div>
+      <div class="contribution"><h3>{{ $d.contribution_title }}</h3><p>{{ $d.contribution_text }}</p></div><div class="flow-grid reveal">{{ range $d.method }}<article><div><span class="flow-icon">{{ .n }}</span><small>{{ .n }}</small></div><h3>{{ .title }}</h3><p>{{ .text }}</p></article>{{ end }}</div>
       <div class="process-sequence reveal" aria-label="{{ if eq $lang "es" }}Secuencia del proceso flash{{ else }}Flash process sequence{{ end }}">
         <div><span>01</span><strong>{{ if eq $lang "es" }}Alimentación{{ else }}Feed{{ end }}</strong><small>100 kg/h · {{ if eq $lang "es" }}30% masa EtOH{{ else }}30 wt% EtOH{{ end }}</small></div><i aria-hidden="true">→</i>
         <div><span>02</span><strong>H-1</strong><small>{{ if eq $lang "es" }}Temperatura controlada{{ else }}Controlled temperature{{ end }}</small></div><i aria-hidden="true">→</i>

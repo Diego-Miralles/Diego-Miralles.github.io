@@ -1,0 +1,8 @@
+{{ define "main" }}
+<main id="main" class="section"><div class="wrap">
+  <p class="kicker">404 · Diego Miralles</p>
+  <h1>{{ if eq .Site.Language.Lang "es" }}Página no encontrada{{ else }}Page not found{{ end }}</h1>
+  <p>{{ if eq .Site.Language.Lang "es" }}El enlace no existe o ha cambiado. Puedes volver a los proyectos desde el portfolio.{{ else }}This link does not exist or has changed. You can find the projects on the portfolio.{{ end }}</p>
+  <div class="button-row"><a class="button primary" href="{{ "" | relLangURL }}">{{ if eq .Site.Language.Lang "es" }}Volver al portfolio{{ else }}Back to portfolio{{ end }}</a></div>
+</div></main>
+{{ end }}

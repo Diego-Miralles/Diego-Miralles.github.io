@@ -1,50 +1,67 @@
-language_switch: "ES"
-language_switch_label: "View this case study in Spanish"
-back: "Back to portfolio"
-live: "Open functional beta"
-live_note: "Hosted on Render; the beta may take a few seconds to wake after inactivity."
-status: "Functional private beta"
-kicker: "PeerScope / Case study / 2026"
-title: "From financial records to a chemical-sector competitive diagnosis."
-intro: "PeerScope is a competitive-intelligence platform for chemical manufacturing companies. It turns financial data into comparable indicators, peer benchmarks, interpretable scores and decision-ready reports."
-collaboration: "Co-created by Diego Miralles and Javier Gonzálvez. Every figure on this page describes the shared platform as a whole, rather than either person's individual output. Metrics are a September 2026 snapshot."
-metrics:
-  - { value: "1,777", label: "companies in the data pipeline" }
-  - { value: "1,164", label: "valid competitive scores" }
-  - { value: "6", label: "interpretable scoring dimensions" }
-  - { value: "194", label: "automated tests" }
-  - { value: "11", label: "focused subtests" }
-  - { value: "1", label: "chemical-manufacturing Sector Pack" }
-hero_alt: "Synthetic PeerScope chemical-sector benchmark and competitive scoring interface"
-hero_caption: "Benchmark and competitive scoring interface shown with fully synthetic demonstration data."
-challenge_kicker: "01 / The challenge"
-challenge_title: "Make company accounts comparable—and the result understandable."
-challenge_text: "Raw financial records are useful, but they do not immediately explain how a company stands against relevant peers. PeerScope structures that information into a consistent analytical path designed around comparison, interpretation and traceability."
-sector_title: "Why the chemical sector matters"
-sector_text: "The platform narrows the comparison to chemical manufacturing, so the benchmark is framed around a relevant operating context instead of a generic cross-industry average."
-flow_kicker: "02 / Product workflow"
-flow_title: "A clear route from source data to an executive view."
+language_switch: ES
+language_switch_label: View this case study in Spanish
+back: Back to portfolio
+live: Visit the beta
+live_note: 'Private beta: access may require authorisation. The Render service may take time to wake after inactivity.'
+status: Functional private beta
+kicker: PeerScope / Case study / 2026
+title: 'PeerScope: comparing chemical companies'
+intro: A platform for comparing financial indicators of chemical manufacturing companies. It organises data, peer groups and
+  results into dashboards and reports.
+collaboration: Co-created by Diego Miralles and Javier Gonzálvez. Every figure on this page describes the shared platform
+  as a whole, rather than either person's individual output. Metrics are a September 2026 snapshot.
+metrics: []
+hero_alt: Benchmark illustration using synthetic data.
+hero_caption: Benchmark illustration using synthetic data.
+challenge_kicker: 01 / The challenge
+challenge_title: Make company accounts comparable—and the result understandable.
+challenge_text: Raw financial records are useful, but they do not immediately explain how a company stands against relevant
+  peers. PeerScope structures that information into a consistent analytical path designed around comparison, interpretation
+  and traceability.
+sector_title: Why the chemical sector matters
+sector_text: The platform narrows the comparison to chemical manufacturing, so the benchmark is framed around a relevant operating
+  context instead of a generic cross-industry average.
+flow_kicker: 02 / Product workflow
+flow_title: From financial records to a report
 flow:
-  - { n: "01", title: "Structure", text: "Prepare financial records and normalize the indicators needed for comparison." }
-  - { n: "02", title: "Benchmark", text: "Position a company against its peer group and chemical-sector reference set." }
-  - { n: "03", title: "Interpret", text: "Translate relative performance into six readable scoring dimensions and diagnostics." }
-  - { n: "04", title: "Communicate", text: "Present the result through dashboards and executive reporting designed for decisions." }
-product_alt: "Synthetic PeerScope product interface"
-product_caption: "The product interface explains the path from financial records to competitive diagnosis."
-evidence_kicker: "03 / Technical evidence"
-evidence_title: "The architecture makes the analytical boundary visible."
-evidence_text: "The product separates the public experience, the analytical workflow and private imports. That separation makes the route from input to score easier to inspect and keeps the scoring path explicit."
-architecture_alt: "PeerScope system architecture and analytical flow diagram"
-architecture_caption: "Traceable analytical flow; private imports remain isolated from scoring."
-stack_label: "Visible analytical building blocks"
-stack: ["SABI base dataset", "Normalization & validation", "KPIs & rules", "Peer groups & percentiles", "Automated testing", "HTML/PDF reports"]
-scope_kicker: "04 / Scope and authorship"
-scope_title: "A shared product, presented without inflating individual claims."
-scope_text: "PeerScope is included here because Diego participated in building the project. The platform-level results remain explicitly attributed to the collaboration, which is the most accurate way to show the work."
-limitations_title: "Current scope"
+- n: '01'
+  title: Structure
+  text: Prepare financial records and normalize the indicators needed for comparison.
+- n: '02'
+  title: Benchmark
+  text: Position a company against its peer group and chemical-sector reference set.
+- n: '03'
+  title: Interpret
+  text: Translate relative performance into six readable scoring dimensions and diagnostics.
+- n: '04'
+  title: Communicate
+  text: Present the result through dashboards and executive reporting designed for decisions.
+product_alt: Interface illustration using synthetic data.
+product_caption: Interface illustration using synthetic data.
+evidence_kicker: 03 / Architecture
+evidence_title: Separating analysis from private imports
+evidence_text: The product separates the public experience, the analytical workflow and private imports. That separation makes
+  the route from input to score easier to inspect and keeps the scoring path explicit.
+architecture_alt: PeerScope system architecture and analytical flow diagram
+architecture_caption: Traceable analytical flow; private imports remain isolated from scoring.
+stack_label: Visible analytical building blocks
+stack:
+- SABI base dataset
+- Normalization & validation
+- KPIs & rules
+- Peer groups & percentiles
+- Automated testing
+- HTML/PDF reports
+scope_kicker: 04 / Scope and authorship
+scope_title: A shared product, presented without inflating individual claims.
+scope_text: PeerScope is included here because Diego participated in building the project. The platform-level results remain
+  explicitly attributed to the collaboration, which is the most accurate way to show the work.
+limitations_title: Current scope
 limitations:
-  - "The public screens use fully synthetic demonstration data."
-  - "The product is presented as a functional private beta, not a finished commercial service."
-  - "Its diagnostics support analysis; they do not replace specialist financial or strategic judgement."
-collaborator: "See Javier's presentation of PeerScope"
-closing_title: "Explore the working product or return to the complete portfolio."
+- The two interface views are illustrations made for the portfolio with synthetic data, not screenshots of the product in
+  use.
+- The product is presented as a functional private beta, not a finished commercial service.
+- Its diagnostics support analysis; they do not replace specialist financial or strategic judgement.
+- The platform source code, original data and tests are not published in this repository.
+collaborator: See Javier's presentation of PeerScope
+closing_title: Access PeerScope

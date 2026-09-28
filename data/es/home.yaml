@@ -1,101 +1,160 @@
 nav:
-  - { label: "Perfil", id: "profile" }
-  - { label: "Formación", id: "education" }
-  - { label: "Experiencia", id: "experience" }
-  - { label: "Proyectos", id: "projects" }
-  - { label: "Competencias", id: "capabilities" }
-  - { label: "Contacto", id: "contact" }
-menu_label: "Abrir menú de navegación"
-availability: "Abierto a oportunidades de prácticas"
-location: "Alicante, España"
-hero_kicker: "01 / Pensamiento orientado a procesos"
-hero_title: "Ingeniería química aplicada a problemas reales."
-hero_intro: "Estudiante de Ingeniería Química en la Universidad de Alicante, con experiencia directa en producción química y trabajos técnicos completados en simulación de procesos y análisis de ingeniería."
-primary_cta: "Ver mi trabajo"
-cv_cta: "Currículum (EN)"
-github_cta: "Perfil de GitHub"
-visual_label: "Enfoque de ingeniería"
-visual_title: "De los fundamentos al contexto industrial"
-visual_nodes:
-  - { n: "01", title: "Analizar", text: "Balances · termodinámica" }
-  - { n: "02", title: "Modelar", text: "DWSIM · MATLAB" }
-  - { n: "03", title: "Mejorar", text: "Seguridad · decisiones" }
-evidence:
-  - { label: "Experiencia industrial", value: "Entorno de producción química" }
-  - { label: "Herramientas", value: "DWSIM · MATLAB · Excel" }
-  - { label: "Idiomas", value: "Español · Valenciano · Inglés · Alemán" }
+- label: Proyectos
+  id: projects
+- label: Experiencia
+  id: experience
+- label: Formación
+  id: education
+- label: Perfil
+  id: profile
+- label: Competencias
+  id: capabilities
+- label: Contacto
+  id: contact
+menu_label: Abrir menú de navegación
+availability: Abierto a oportunidades de prácticas
+location: Alicante, España
+hero_kicker: Diego Miralles · Universidad de Alicante
+hero_title: Estudiante de Ingeniería Química.
+hero_intro: He trabajado como operador en Químicas Sanz. Aquí reúno mi estudio de separación agua-etanol en DWSIM y PeerScope,
+  una plataforma de análisis de empresas químicas.
+primary_cta: Ver proyectos y archivos
+cv_cta: CV en inglés
+github_cta: Perfil de GitHub
 profile:
-  kicker: "02 / Perfil"
-  title: "Formándome como ingeniero con la seguridad como prioridad."
-  text: "Mi base combina balances de materia y energía, termodinámica y análisis de procesos con conocimiento directo de procedimientos de planta, trabajo en equipo y disciplina operativa. Me interesan especialmente la ingeniería de procesos, la fabricación química y la industria farmacéutica."
-  tags: ["Balances de materia y energía", "Termodinámica", "Análisis de procesos", "Seguridad como prioridad"]
+  kicker: Perfil
+  title: Qué me interesa
+  text: Busco prácticas en ingeniería de procesos, fabricación química o industria farmacéutica. Me interesa relacionar lo
+    que estudio en balances y termodinámica con las condiciones de operación de una planta.
+  tags: []
 education:
-  kicker: "03 / Formación"
-  title: "Grado en Ingeniería Química"
-  school: "Universidad de Alicante · 2024 — Actualidad"
-  text: "Desarrollando una base rigurosa en cálculo de procesos, ciencias químicas y análisis cuantitativo, combinada con herramientas prácticas y principios fundamentales de ingeniería."
-  coursework_label: "Fundamentos relevantes"
-  coursework: ["Balances de materia y energía", "Termodinámica", "Química física", "Química orgánica", "Matemáticas", "Física"]
+  kicker: Formación
+  title: Grado en Ingeniería Química
+  school: Universidad de Alicante · 2024 — Actualidad
+  text: Formación en balances de materia y energía, termodinámica, química y métodos cuantitativos. El estudio personal de
+    DWSIM aplica parte de estos contenidos a una separación agua-etanol.
+  coursework_label: Fundamentos relevantes
+  coursework:
+  - Balances de materia y energía
+  - Termodinámica
+  - Química física
+  - Química orgánica
+  - Matemáticas
+  - Física
 experience:
-  kicker: "04 / Experiencia industrial"
-  title: "Operador de planta química"
-  company: "Químicas Sanz · España"
+  kicker: Experiencia industrial
+  title: Operador de planta química
+  company: Químicas Sanz · España
   points:
-    - "Apoyo en actividades diarias dentro de un entorno de producción química."
-    - "Seguimiento de procedimientos operativos y requisitos de seguridad laboral."
-    - "Colaboración con personal de planta para apoyar operaciones seguras, ordenadas y eficientes."
+  - Apoyo en las actividades diarias de producción química.
+  - Seguimiento de los procedimientos operativos y de seguridad laboral de la planta.
+  - Trabajo con el personal de planta durante las operaciones de producción.
 projects:
-  kicker: "05 / Proyectos seleccionados"
-  title: "Trabajo aplicado en inteligencia competitiva y simulación de procesos."
-  peer_status: "Beta privada funcional"
-  peer_title: "PeerScope — Plataforma de inteligencia competitiva"
-  peer_visual: "Comparativas, diagnóstico e informes ejecutivos para el sector químico."
-  peer_text: "Plataforma de inteligencia competitiva centrada en empresas de fabricación química. Transforma datos financieros en KPI comparables, referencias frente a empresas similares, puntuaciones interpretables, diagnósticos e informes ejecutivos."
-  peer_metrics:
-    - { value: "1.777", label: "empresas en el flujo de datos" }
-    - { value: "1.164", label: "puntuaciones competitivas válidas" }
-    - { value: "6", label: "dimensiones de puntuación interpretables" }
-  peer_tags: ["Fabricación química", "Análisis financiero", "Benchmarking competitivo", "Informes ejecutivos"]
-  case_cta: "Ver caso de estudio completo"
-  live_cta: "Abrir beta funcional"
-  live_note: "Alojada en Render; la beta puede tardar unos segundos en activarse tras un periodo de inactividad."
-  gallery_label: "Vistas del producto PeerScope"
-  gallery_prev: "Vista anterior del producto"
-  gallery_next: "Vista siguiente del producto"
+  kicker: Proyectos seleccionados
+  title: Proyectos y documentación
+  peer_status: Beta privada funcional
+  peer_title: PeerScope · Análisis de empresas químicas
+  peer_visual: Comparativas, diagnóstico e informes ejecutivos para el sector químico.
+  peer_text: Plataforma para comparar indicadores financieros de empresas de fabricación química. Organiza datos, grupos de
+    referencia y resultados en paneles e informes.
+  peer_metrics: []
+  peer_tags:
+  - SABI
+  - KPI
+  - Benchmarking
+  case_cta: Ver caso de estudio completo
+  live_cta: Acceder a la beta
+  live_note: 'Beta privada: el acceso puede requerir autorización. El servicio de Render puede tardar en activarse tras un
+    periodo de inactividad.'
+  gallery_label: Vistas del producto PeerScope
+  gallery_prev: Vista anterior del producto
+  gallery_next: Vista siguiente del producto
   gallery:
-    - { src: "/projects/peerscope-dashboard.svg", alt: "Dashboard sintético de benchmark químico de PeerScope", caption: "Benchmark sectorial y scoring competitivo con datos de demostración inequívocamente sintéticos.", fit: "cover" }
-    - { src: "/projects/peerscope-product.svg", alt: "Interfaz sintética del producto PeerScope", caption: "Vista del producto: de los datos financieros a un diagnóstico competitivo interpretable.", fit: "cover" }
-    - { src: "/projects/peerscope-architecture.svg", alt: "Arquitectura y flujo de datos de PeerScope", caption: "Flujo analítico trazable; las importaciones privadas permanecen aisladas del scoring.", fit: "contain" }
-  dwsim_status: "Estudio técnico completado"
-  dwsim_title: "Recuperación de etanol — Flash y destilación"
-  dwsim_text: "Estudio en DWSIM de la separación agua-etanol que analiza cómo la temperatura del flash modifica recuperación, pureza del vapor y energía específica, con una extensión exploratoria independiente de destilación."
-  dwsim_note: "Compromiso flash seleccionado: 88 °C. Los resultados se apoyan en balances de componentes, un barrido de sensibilidad documentado y una revisión HAZOP educativa."
-  dwsim_tags: ["DWSIM", "NRTL", "Simulación de procesos", "Análisis de sensibilidad", "Balances de materia"]
+  - src: /projects/peerscope-dashboard.svg
+    alt: Ilustración del benchmark con datos sintéticos.
+    caption: Ilustración del benchmark con datos sintéticos.
+    fit: contain
+  - src: /projects/peerscope-product.svg
+    alt: Ilustración de la interfaz con datos sintéticos.
+    caption: Ilustración de la interfaz con datos sintéticos.
+    fit: contain
+  - src: /projects/peerscope-architecture.svg
+    alt: Arquitectura y flujo de datos de PeerScope
+    caption: Flujo analítico trazable; las importaciones privadas permanecen aisladas del scoring.
+    fit: contain
+  dwsim_status: Estudio académico personal · 2026
+  dwsim_title: Recuperación de etanol — Flash y destilación
+  dwsim_text: Simulación de una separación agua-etanol en DWSIM. Comparé siete temperaturas de flash y documenté el efecto
+    sobre la recuperación, la pureza y el consumo energético.
+  dwsim_note: Elegí 88 °C por su menor energía específica entre los casos ensayados. Los balances de componentes quedan dentro
+    de la tolerancia del 0,5%. El modelo no tiene validación experimental.
+  dwsim_tags:
+  - DWSIM 9.0.5
+  - NRTL
+  - Excel
   dwsim_metrics:
-    - { value: "58,4%", label: "recuperación de etanol a 88 °C" }
-    - { value: "62,0% masa", label: "pureza de etanol en el vapor" }
-    - { value: "1,098", label: "kWh/kg de EtOH recuperado" }
-  dwsim_case_cta: "Ver caso de estudio completo"
-  dwsim_report_cta: "Descargar informe"
-  dwsim_gallery_label: "Vistas del proyecto de recuperación de etanol"
-  dwsim_gallery_prev: "Vista anterior del proyecto"
-  dwsim_gallery_next: "Vista siguiente del proyecto"
+  - value: 58,4%
+    label: recuperación de etanol a 88 °C
+  - value: 62,0% masa
+    label: pureza de etanol en el vapor
+  - value: 1,098
+    label: kWh/kg de EtOH recuperado
+  dwsim_case_cta: Ver caso de estudio completo
+  dwsim_report_cta: Descargar informe
+  dwsim_gallery_label: Vistas del proyecto de recuperación de etanol
+  dwsim_gallery_prev: Vista anterior del proyecto
+  dwsim_gallery_next: Vista siguiente del proyecto
   dwsim_gallery:
-    - { src: "/projects/ethanol-flash-dwsim.png", alt: "Flowsheet de DWSIM del caso de referencia flash agua-etanol", caption: "Flowsheet de referencia: alimentación, calentador, corriente bifásica y separador flash.", fit: "contain" }
-    - { src: "/projects/ethanol-tradeoff-es.svg", alt: "Recuperación de etanol y pureza del vapor a distintas temperaturas de flash", caption: "El barrido térmico muestra el compromiso recuperación-pureza y destaca la condición seleccionada de 88 °C.", fit: "cover" }
-    - { src: "/projects/ethanol-column-schematic-es.svg", alt: "Esquema simplificado de una columna de destilación agua-etanol", caption: "Un escenario multietapa independiente explora la ganancia de pureza y el coste energético de aumentar el reflujo.", fit: "cover" }
+  - src: /projects/ethanol-flash-dwsim.png
+    alt: Flowsheet de DWSIM del caso de referencia flash agua-etanol
+    caption: 'Flowsheet de referencia: alimentación, calentador, corriente bifásica y separador flash.'
+    fit: contain
+  - src: /projects/ethanol-tradeoff-es.svg
+    alt: Recuperación de etanol y pureza del vapor a distintas temperaturas de flash
+    caption: 'Barrido de simulación: al subir la temperatura aumenta la recuperación y disminuye la pureza del vapor.'
+    fit: contain
+  - src: /projects/ethanol-column-schematic-es.svg
+    alt: Esquema simplificado de una columna de destilación agua-etanol
+    caption: Un escenario multietapa independiente explora la ganancia de pureza y el coste energético de aumentar el reflujo.
+    fit: contain
+  peer_note: Las imágenes son ilustraciones del portfolio con datos sintéticos; no son capturas de análisis de empresas reales.
+  dwsim_conditions: 'Resultados de simulación a 88 °C y 1 bar. Alimentación: 100 kg/h, 30% en masa de etanol, entrada a 25
+    °C.'
 capabilities:
-  kicker: "06 / Competencias"
-  title: "Fundamentos técnicos con contexto industrial."
+  kicker: Competencias
+  title: Herramientas y uso
   groups:
-    - { title: "Ingeniería de procesos", items: ["Balances de materia y energía", "Termodinámica", "Análisis de procesos"] }
-    - { title: "Software y datos", items: ["DWSIM", "MATLAB", "Microsoft Excel"] }
-    - { title: "Ejecución técnica", items: ["Documentación técnica", "Trabajo en equipo", "Atención al detalle"] }
-  languages_title: "Idiomas"
-  languages: ["Español · Nativo", "Valenciano · C1", "Inglés · B2", "Alemán · A2 → B1"]
+  - title: DWSIM
+    items:
+    - Modelo NRTL de una mezcla agua-etanol.
+    - Barrido de temperatura y escenario independiente de destilación.
+    href: projects/ethanol-recovery/
+    link: Ver la simulación
+  - title: Excel
+    items:
+    - Cálculo de balances y energía específica.
+    - Comparación de escenarios y registro de comprobaciones.
+    href: projects/ethanol-recovery/#downloads
+    link: Ver el libro de cálculo
+  - title: MATLAB
+    items:
+    - Uso en prácticas y ejercicios de la formación.
+    - Sin un proyecto de MATLAB publicado en este portfolio.
+  languages_title: Idiomas
+  languages:
+  - Español · Nativo
+  - Valenciano · C1
+  - Inglés · B2
+  - Alemán · A2 → B1
 contact:
-  kicker: "07 / Contacto"
-  title: "Interesado en oportunidades de procesos, fabricación y sector farmacéutico."
-  text: "Estoy construyendo un portfolio de trabajo aplicado en ingeniería química y abierto a conversar sobre prácticas, proyectos técnicos y oportunidades internacionales."
-  email: "Escribir a Diego"
-  github: "Ver GitHub"
+  kicker: Contacto
+  title: Contacto para prácticas
+  text: Me interesan las oportunidades en procesos, fabricación química y sector farmacéutico, también fuera de España. Puedes
+    escribirme por correo.
+  email: Escribir a Diego
+  github: Ver GitHub
+featured_label: Estudio personal · DWSIM
+featured_title: Recuperación de etanol
+featured_caption: 'Resultados simulados: 100 kg/h, 30% en masa de etanol, 1 bar. A 88 °C se obtiene la menor energía específica
+  de los casos ensayados; aumentar la recuperación reduce la pureza.'
+featured_cta: Ver método, resultados y modelos
